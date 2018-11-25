@@ -1,10 +1,8 @@
-# Gatsby & Netlify CMS Example
+# Montreal React & React Native JavaScript
 
-An example website built using Gatsby V2 and Netlify CMS. The website is a fake JavaScript meetup site that lists upcoming meetups, information about the meetup group, as well as a list of past meetups.
+The website for the Montreal React & React Native meetup. The site lists information related to upcoming and past meetups including the presenters, topics discussed, and sponsors.
 
-The purpose of the repository is to provide an idea of how a Gatsby project is structured with Netlify CMS. You can easily deploy your own instance of this application by clicking the button below:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/robertcoopercode/gatsby-netlify-cms)
+The content for the website is managed using Netlify CMS.
 
 ## Local Development
 
