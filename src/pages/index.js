@@ -12,7 +12,7 @@ import "../styles/home.scss";
 export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
   const presenters = upcomingMeetup && upcomingMeetup.presenters;
   return (
-    <>
+    <div className="home">
       <section className="header">
         <div className="header-container  container">
           {home.headerImage && <img className="header-image" src={home.headerImage.image} alt={home.headerImage.imageAlt} />}
@@ -28,7 +28,7 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
       </section>
       <section className="upcomingMeetup  section">
         <div className="upcomingMeetup-container  container">
-          <h2 className="upcomingMeetup-title">{home.upcomingMeetupHeading}</h2>
+          <h2 className="upcomingMeetup-title  home-sectionTitle">{home.upcomingMeetupHeading}</h2>
           {upcomingMeetup ? (
             <>
               <p className="upcomingMeetup-detail  upcomingMeetup-detail--date">
@@ -85,7 +85,12 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
           </div>
         </CustomLink>
       </section>
-    </>
+      <section className="recentMeetups  section">
+        <div className="recentMeetups-container  container">
+          <h2 className="recentMeetups-title  home-sectionTitle">Recent Meetups</h2>
+        </div>
+      </section>
+    </div>
   );
 };
 

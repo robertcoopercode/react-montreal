@@ -1,6 +1,11 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
+.home-sectionTitle {
+  @include large-font;
+  margin-bottom: 30px;
+}
+
 .header {
   height: 450px;
   background: $background-gradient;
@@ -74,11 +79,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  &-title {
-    @include large-font;
-    margin-bottom: 30px;
   }
 
   &-detail {
@@ -231,5 +231,12 @@
     @include respond-to("medium") {
       margin-bottom: 40px;
     }
+  }
+}
+
+.recentMeetups {
+  &-title {
+    display: flex;
+    justify-content: center;
   }
 }
