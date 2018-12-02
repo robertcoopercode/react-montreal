@@ -4,23 +4,23 @@ title: React Montreal Developer Meetup
 mainImage:
   image: /img/aboutimage.jpg
   imageAlt: Youi.tv presentation at the November 2018 meetup.
-gallery:
-  - image: /img/neonbrand-509131-unsplash.jpg
-    imageAlt: Wakanda JavaScript developer presenting at a meetup.
-  - image: /img/jakob-dalbjorn-730178-unsplash.jpg
-    imageAlt: Wakanda JavaScript developer presenting at a meetup.
-  - image: /img/annie-spratt-608001-unsplash.jpg
-    imageAlt: Wakanda developers working together at a table.
-developerGroups: |-
+developerGroups: >-
   ## Other Montreal Developer Groups
 
+
   * [Javascript Meetup](http://js-montreal.org/)
-  * [Python Meetup](https://www.google.com)
-  * [Google Developer Meetup](https://www.google.com)
-  * [Vue.js Meetup](https://www.google.com)
-  * [Ruby Meetup](https://www.google.com)
+
+  * [Python Meetup](https://www.meetup.com/Montreal-Python/)
+
+  * [Google Developer
+  Meetup](https://www.meetup.com/Montreal-Google-Developer-Group-GDG-Montreal/)
+
+  * [Vue.js Meetup](https://www.meetup.com/Vue-js-Montreal/)
+
+  * [Ruby Meetup](https://www.meetup.com/montrealrb/)
+
+  * [iOS Developer Meetup](https://www.meetup.com/CocoaHeads-Montreal/)
 organizers:
-  title: Group Organizers
   gallery:
     - image: /img/placeholder.png
       imageAlt: Kenza Iraki
@@ -28,6 +28,7 @@ organizers:
     - image: /img/placeholder.png
       imageAlt: Nicolas Cuillery
       name: Nicolas Cuillery
+  title: Group Organizers
 seo:
   browserTitle: About | React Montreal
   description: >-
