@@ -1,6 +1,20 @@
 ---
 templateKey: sponsors-page
 title: Sponsors
+callToAction:
+  label: Contact Us
+  link: 'mailto:info@letsreact.io'
+  text: Interested in sponsoring the meetup?
+sponsorList:
+  - link: 'https://www.123loadboard.com/'
+    logo: /img/image.svg
+    name: 123Loadboard
+  - link: 'https://www.123loadboard.com/'
+    logo: /img/image.svg
+    name: Zenika
+  - link: 'https://www.123loadboard.com/'
+    logo: /img/image.svg
+    name: Breather
 seo:
   browserTitle: Sponsors | React Montreal
   description: >-
