@@ -2,8 +2,8 @@
 templateKey: about-page
 title: React Montreal Developer Meetup
 mainImage:
-  image: /img/teemu-paananen-376238-unsplash.jpg
-  imageAlt: Wakanda JavaScript developer presenting at a meetup.
+  image: /img/aboutimage.jpg
+  imageAlt: Youi.tv presentation at the November 2018 meetup.
 gallery:
   - image: /img/neonbrand-509131-unsplash.jpg
     imageAlt: Wakanda JavaScript developer presenting at a meetup.
@@ -38,4 +38,4 @@ seo:
 ---
 ## Sharing Ideas and Meeting Others
 
-React Montreal is a user group run by volunteers. We meet in borrowed spaces, graciously provided by different companies and organisations. Our purpose is to provide a place where our members have a good time talking about programming, sharing their knowledge and meeting other passionate folks. We keep it friendly, inclusive and positive.
+If you're working with React and/or React Native, or interested in learning, this group is for you! We meet every month to discuss progress with React, new tools, features and libraries. As people working with a young technology with best practices still yet to emerge, our focus is on helping the Montreal React community grow, and providing each other with input and advice and sharing our latest findings.
