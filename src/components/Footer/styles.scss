@@ -2,7 +2,7 @@
 @import "../../styles/mixins";
 
 .footer {
-  background-color: $background-dark;
+  background-color: $background-footer;
   @include medium-font;
   color: $body-light;
   padding: 80px 20px;
@@ -23,7 +23,7 @@
     }
   }
 
-  &-top {
+  &-socialMenu {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -32,6 +32,7 @@
 
     @include respond-to("small") {
       flex-direction: row;
+      justify-content: space-around;
     }
   }
 
@@ -51,14 +52,6 @@
 
   &-aboutDescription {
     @include medium-font();
-  }
-
-  &-socialMenu {
-    margin: 20px;
-
-    @include respond-to("small") {
-      margin-left: auto;
-    }
   }
 
   &-socialMenuItem {

@@ -25,11 +25,6 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            logoImage {
-              image
-              imageAlt
-              tagline
-            }
             socialLinks {
               image
               imageAlt

@@ -161,12 +161,14 @@
 
     @include respond-to("medium") {
       position: absolute;
-      align-items: flex-end;
-      transition: box-shadow $medium-transition-duration cubic-bezier(0.4, 0, 0.3, 1);
+      align-items: flex-start;
+      transition: 
+        box-shadow $medium-transition-duration cubic-bezier(0.4, 0, 0.3, 1),
+        transform $medium-transition-duration ease-in-out;
     }
 
     &--first {
-      background-color: $highlight-secondary;
+      background-color: $background-dark;
 
       @include respond-to("medium") {
         justify-content: flex-end;
@@ -177,7 +179,7 @@
       }
     }
     &--second {
-      background-color: $background-medium;
+      background-color: $highlight-secondary;
 
       @include respond-to("medium") {
         bottom: 0;
@@ -190,6 +192,7 @@
     &:hover {
       z-index: 10;
       box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.25);
+      transform: scale(1.025)
     }
   }
 
@@ -209,6 +212,8 @@
       position: absolute;
       height: unset;
       width: 100vw / 2;
+      top: 50%;
+      transform: translateY(-30%);
     }
 
     @include respond-to("large") {

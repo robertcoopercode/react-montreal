@@ -1,6 +1,7 @@
 $white: #fff;
 $american-silver: #cecece;
 $sambucus: #1b1d2e;
+$maritime-blue: #27263A;
 $black-blueberry: #2d3047;
 $coronation: #ececec;
 $golden-apricot: #e0a458;
@@ -11,9 +12,11 @@ $highlight: $golden-apricot;
 $highlight-secondary: $greenway;
 
 $background-light: $snowy-mountain;
-$background-dark: $sambucus;
+$background-header: $sambucus;
+$background-footer: $sambucus;
+$background-dark: $maritime-blue;
 $background-medium: $black-blueberry;
-$background-gradient: radial-gradient(1335.45px at 100% 14.17%, rgba(49, 47, 89, 0.91) 0%, #27263A 100%);
+$background-gradient: radial-gradient(1335.45px at 100% 14.17%, rgba(49, 47, 89, 0.91) 0%, $maritime-blue 100%);
 
 $menu-active: $white;
 $menu-inactive: $american-silver;
@@ -22,7 +25,7 @@ $body-light: $coronation;
 $body-dark: $black-blueberry;
 
 $navbar-height: 50px;
-$footer-height: 500px;
+$footer-height: 300px;
 $container-padding: 20px;
 $section-padding: 80px;
 $section-padding-mobile: 40px;

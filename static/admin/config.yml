@@ -267,14 +267,13 @@ collections:
         fields:
           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "footer" }
           - {
-              label: "Logo Image & Tagline",
-              name: "logoImage",
+              label: "Bottom Icon",
+              name: "icon",
               widget: "object",
               fields:
                 [
                   { label: "Image", name: "image", widget: "image" },
-                  { label: "Image Description", name: "imageAlt", widget: "string" },
-                  { label: "Tagline", name: "tagline", widget: "string" },
+                  { label: "Image Alt Text", name: "imageAlt", widget: "string" },
                 ],
             }
           - {
