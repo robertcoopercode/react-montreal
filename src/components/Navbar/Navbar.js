@@ -8,8 +8,8 @@ export const NavbarTemplate = ({ data }) => (
     <div className="container  navbar-container">
       {data.menuItems.length > 0 && (
         <ul className="navbar-menu">
-          {data.menuItems.map(menuItem => (
-            <li key={menuItem.linkURL} className="navbar-menuItem">
+          {data.menuItems.map((menuItem, index) => (
+            <li key={menuItem.linkURL + index} className="navbar-menuItem">
               <CustomLink
                 linkType={menuItem.linkType}
                 linkURL={menuItem.linkURL}

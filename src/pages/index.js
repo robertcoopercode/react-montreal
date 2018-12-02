@@ -3,14 +3,15 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import isAfter from "date-fns/is_after";
+import isBefore from "date-fns/is_before";
+import { Link } from 'gatsby';
 
 import Layout from "../components/Layout";
-import HeadshotPlaceholder from "../img/headshot-placeholder.svg";
+import Meetup from "../templates/meetup";
 import CustomLink from "../components/CustomLink";
 import "../styles/home.scss";
 
-export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
-  const presenters = upcomingMeetup && upcomingMeetup.presenters;
+export const HomePageTemplate = ({ home, upcomingMeetup = null, recentMeetups = [] }) => {
   return (
     <div className="home">
       <section className="header">
@@ -31,32 +32,8 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
           <h2 className="upcomingMeetup-title  home-sectionTitle">{home.upcomingMeetupHeading}</h2>
           {upcomingMeetup ? (
             <>
-              <p className="upcomingMeetup-detail  upcomingMeetup-detail--date">
-                <span className="upcomingMeetup-detailLabel">Date: </span>
-                {upcomingMeetup.formattedDate}
-              </p>
-              <p className="upcomingMeetup-detail  upcomingMeetup-detail--location">
-                <span className="upcomingMeetup-detailLabel">Location: </span>
-                {upcomingMeetup.location.name}
-              </p>
-              {presenters.length > 0 && (
-                <div className="upcomingMeetup-presenters">
-                  {presenters.map(presenter => (
-                    <div className="upcomingMeetup-presenter" key={presenter.text}>
-                      <img
-                        className="upcomingMeetup-presenterImage"
-                        src={presenter.image ? presenter.image : HeadshotPlaceholder}
-                        alt={presenter.image ? presenter.name : "Default headshot placeholder"}
-                      />
-                      <span className="upcomingMeetup-presenterName">{presenter.name}</span>
-                      <span className="upcomingMeetup-presenterPresentationTitle">
-                        {presenter.presentationTitle}
-                      </span>
-                      <p className="upcomingMeetup-presenterDescription">{presenter.text}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
+              <Meetup meetup={upcomingMeetup} />
+              <a className="upcomingMeetup-link" href="#">Tell us you're attending!</a>
             </>
           ) : (
             <p className="upcomingMeetup-detail">{home.noUpcomingMeetupText}</p>
@@ -85,11 +62,19 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
           </div>
         </CustomLink>
       </section>
-      <section className="recentMeetups  section">
-        <div className="recentMeetups-container  container">
-          <h2 className="recentMeetups-title  home-sectionTitle">Recent Meetups</h2>
-        </div>
-      </section>
+      {
+        recentMeetups && (
+          <section className="recentMeetups  section">
+            <div className="recentMeetups-container  container">
+              <h2 className="recentMeetups-title  home-sectionTitle">Recent Meetups</h2>
+              {recentMeetups.map(meetup => (
+                <Meetup key={meetup.title} className="recentMeetups-meetup" meetup={meetup} />
+              ))}
+            </div>
+            <Link className="recentMeetups-link" to="/meetups">View all meetups</Link>
+          </section>
+        )
+      }
     </div>
   );
 };
@@ -105,11 +90,15 @@ class HomePage extends React.Component {
       seo: { title: seoTitle, description: seoDescription, browserTitle },
     } = home;
     let upcomingMeetup = null;
+    let recentMeetups = [];
     // Find the next meetup that is closest to today
-    data.allMarkdownRemark.edges.every(item => {
+    data.meetupData.edges.every(item => {
       const { frontmatter: meetup } = item.node;
       if (isAfter(meetup.rawDate, new Date())) {
         upcomingMeetup = meetup;
+        return true;
+      } else if (isBefore(meetup.rawDate, new Date()) && recentMeetups.length < 3) {
+        recentMeetups.push(meetup);
         return true;
       } else {
         return false;
@@ -122,7 +111,7 @@ class HomePage extends React.Component {
           <meta name="description" content={seoDescription} />
           <title>{browserTitle}</title>
         </Helmet>
-        <HomePageTemplate home={home} upcomingMeetup={upcomingMeetup} />
+        <HomePageTemplate home={home} upcomingMeetup={upcomingMeetup} recentMeetups={recentMeetups} />
       </Layout>
     );
   }
@@ -130,7 +119,7 @@ class HomePage extends React.Component {
 
 HomePage.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    meetupData: PropTypes.shape({
       edges: PropTypes.array,
     }),
   }),
@@ -140,31 +129,8 @@ export default HomePage;
 
 export const pageQuery = graphql`
   query HomePageQuery {
-    allMarkdownRemark(
-      filter: { frontmatter: { presenters: { elemMatch: { text: { ne: null } } } } }
-      sort: { order: DESC, fields: frontmatter___date }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            formattedDate: date(formatString: "MMMM Do YYYY @ h:mm A")
-            rawDate: date
-            presenters {
-              name
-              image
-              text
-              presentationTitle
-            }
-            location {
-              mapsLink
-              name
-            }
-          }
-        }
-      }
-    }
     ...LayoutFragment
+    ...MeetupFragment
     homePageData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "home-page" } } }) {
       edges {
         node {

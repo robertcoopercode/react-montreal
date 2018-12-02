@@ -88,21 +88,18 @@ $breakpoints: (
   }
 }
 
-@mixin title-link-border() {
-  border-bottom: 3px solid $highlight;
-}
-
-@mixin large-button() {
+@mixin large-button($color: $highlight-secondary) {
   height: 45px;
+  color: $body-light;
   line-height: 45px;
   display: inline-block;
   padding: 0 20px;
   font-size: 20px;
-  border-radius: 6px;
-  background-color: $highlight-secondary;
+  border-radius: 2px;
+  background-color: $color;
   transition: all $short-transition-duration ease-in-out;
 
   &:hover {
-    background-color: lighten($highlight-secondary, 5%)
+    background-color: lighten($color, 5%)
   }
 }

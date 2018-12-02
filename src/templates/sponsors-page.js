@@ -8,19 +8,18 @@ import ReactMarkdown from "react-markdown";
 import MeetupTemplate from "./meetup";
 import Layout from "../components/Layout";
 import HTMLContent from "../components/Content";
-import "../styles/past-meetups-page.scss";
+import "../styles/sponsors-page.scss";
 
-export const PastMeetupsPageTemplate = ({
+export const SponsorsPageTemplate = ({
   title,
   content,
-  meetups = null,
   bodyIsMarkdown = false,
 }) => {
   return (
-    <article className="pastMeetups">
-      <div className="container  pastMeetups-container">
-        <h1 className="pastMeetups-title">{title}</h1>
-        {bodyIsMarkdown ? (
+    <article className="sponsorsPage">
+      <div className="container  sponsorsPage-container">
+        <h1 className="sponsorsPage-title">{title}</h1>
+        {/* {bodyIsMarkdown ? (
           <ReactMarkdown className="pastMeetups-description" source={content} />
         ) : (
           <HTMLContent className="pastMeetups-description" content={content} />
@@ -32,31 +31,25 @@ export const PastMeetupsPageTemplate = ({
               className="pastMeetups-meetup"
               meetup={meetup.node.frontmatter}
             />
-          ))}
+          ))} */}
       </div>
     </article>
   );
 };
 
-PastMeetupsPageTemplate.propTypes = {
+SponsorsPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   meetups: PropTypes.array,
 };
 
-const PastMeetupsPage = ({ data }) => {
+const SponsorsPage = ({ data }) => {
   const { markdownRemark: page } = data;
   const {
     frontmatter: {
       seo: { title: seoTitle, description: seoDescription, browserTitle },
     },
   } = page;
-  let meetups = data.meetupData.edges;
-
-  // Find all the meetups that occured in the past
-  meetups = meetups.filter(meetup => {
-    return isBefore(meetup.node.frontmatter.rawDate, new Date()) && meetup;
-  });
 
   return (
     <Layout footerData={data.footerData} navbarData={data.navbarData}>
@@ -65,23 +58,22 @@ const PastMeetupsPage = ({ data }) => {
         <meta name="description" content={seoDescription} />
         <title>{browserTitle}</title>
       </Helmet>
-      <PastMeetupsPageTemplate
+      <SponsorsPageTemplate
         title={page.frontmatter.title}
         content={page.html}
-        meetups={meetups}
       />
     </Layout>
   );
 };
 
-PastMeetupsPage.propTypes = {
+SponsorsPage.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default PastMeetupsPage;
+export default SponsorsPage;
 
-export const pastMeetupsPageQuery = graphql`
-  query PastMeetupsPage($id: String!) {
+export const sponsorsPageQuery = graphql`
+  query SponsorsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
@@ -94,6 +86,5 @@ export const pastMeetupsPageQuery = graphql`
       }
     }
     ...LayoutFragment
-    ...MeetupFragment
   }
 `;

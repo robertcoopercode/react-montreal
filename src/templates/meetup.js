@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 import "../styles/meetup.scss";
 
 import HeadshotPlaceholder from "../img/headshot-placeholder.svg";
@@ -17,12 +18,13 @@ class MeetupTemplate extends Component {
             <span className="meetup-label">Date:</span> {this.props.meetup.formattedDate}
           </p>
           <p className="meetup-metaField  meetup-metaField--location">
-            <span className="meetup-label">Location:</span> {this.props.meetup.location.name}
+            <span className="meetup-label">Location:</span>&nbsp;
+            <a className="meetup-metaFieldLink" href={this.props.meetup.location.mapsLink} target="_blank" rel="noopener noreferrer">{this.props.meetup.location.name}</a>
           </p>
         </div>
         <div className="meetup-presenters">
           {this.props.meetup.presenters.map(presenter => (
-            <div className="meetup-presenter meetupUnit" key={presenter.name}>
+            <div className="meetup-presenter meetupUnit" key={presenter.presentationTitle}>
               <div className="meetup-presenterImageContainer  meetupUnit-imageContainer">
                 <img
                   className="meetup-presenterImage  meetupUnit-image"
@@ -50,24 +52,28 @@ class MeetupTemplate extends Component {
             </div>
           ))}
         </div>
-        <h3 className="meetup-sponsorsTitle">Thanks to our Sponsors</h3>
+        {this.props.meetup.sponsors && <h3 className="meetup-sponsorsTitle">Thanks to our Sponsors</h3>}
         <div className="meetup-sponsors">
-            <div className="meetup-sponsor  meetupUnit">
+          {this.props.meetup.sponsors && this.props.meetup.sponsors.map(sponsor => (
+            <div className="meetup-sponsor  meetupUnit" key={sponsor.name}>
               <div className="meetupUnit-imageContainer">
-                <img className="meetupUnit-image" src={HeadshotPlaceholder} alt={"Default headshot placeholder"} />
-                <h4 className="meetupUnit-name">Shopify</h4>
+                <img className="meetupUnit-image" src={sponsor.logo} alt={sponsor.name} />
+                <h4 className="meetupUnit-name">{sponsor.name}</h4>
               </div>
               <div className="meetupUnit-info">
-                <p className="meetupUnit-text">Thanks to Shopify for sponsoring the venue location.</p>
+                <p className="meetupUnit-text">{sponsor.text}</p>
                 <ul className="meetupUnit-links">
-                  <li className="meetupUnit-linkItem">
-                    <a className="meetupUnit-link" href="#">
-                      Work at Shopify
-                    </a>
-                  </li>
+                  {sponsor.links && sponsor.links.map((link) => (
+                    <li className="meetupUnit-linkItem" key={link.linkURL}>
+                      <a className="meetupUnit-link" href={link.linkURL}>
+                        {link.linkText}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
+          ))}
         </div>
       </section>
     );
@@ -81,5 +87,47 @@ MeetupTemplate.propTypes = {
     presenters: PropTypes.array,
   }),
 };
+
+export const query = graphql`
+  fragment MeetupFragment on Query {
+    meetupData: allMarkdownRemark(
+      filter: { frontmatter: { presenters: { elemMatch: { text: { ne: null } } } } }
+      sort: { order: DESC, fields: frontmatter___date }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            formattedDate: date(formatString: "MMMM Do YYYY @ h:mm A")
+            rawDate: date
+            presenters {
+              name
+              image
+              text
+              presentationTitle
+              links {
+                linkText
+                linkURL
+              }
+            }
+            sponsors {
+              logo
+              name
+              text
+              links {
+                linkText
+                linkURL
+              }
+            }
+            location {
+              mapsLink
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default MeetupTemplate;

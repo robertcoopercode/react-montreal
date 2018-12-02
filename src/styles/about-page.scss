@@ -10,29 +10,13 @@
 
     @include respond-to("medium") {
       padding-top: 60px;
-      flex-direction: row;
-      justify-content: space-around;
-    }
-  }
-
-  &-titleWrapper {
-    margin-bottom: 40px;
-    margin-right: 20px;
-    text-align: center;
-    flex-shrink: 0;
-
-    @include respond-to("medium") {
-      flex-basis: 450px;
-      text-align: left;
-      margin-bottom: 0;
-      justify-content: space-around;
     }
   }
 
   &-title {
     @include xlarge-font();
-    @include title-link-border();
     display: inline;
+    margin-bottom: 40px;
   }
 
   &-imageWrapper {

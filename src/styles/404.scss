@@ -13,7 +13,6 @@
 
   &-title {
     @include large-font();
-    @include title-link-border();
     margin-bottom: 40px;
   }
 

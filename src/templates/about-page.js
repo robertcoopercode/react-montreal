@@ -15,9 +15,7 @@ export const AboutPageTemplate = props => {
     <article className="about">
       <div className="about-container  container">
         <section className="about-header">
-          <div className="about-titleWrapper">
-            <h1 className="about-title">{page.frontmatter.title}</h1>
-          </div>
+          <h1 className="about-title">{page.frontmatter.title}</h1>
           <div className="about-imageWrapper">
             <img src={page.frontmatter.mainImage.image} alt={page.frontmatter.mainImage.imageAlt} />
           </div>
