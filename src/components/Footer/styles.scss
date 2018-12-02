@@ -80,10 +80,20 @@
     margin-top: auto;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 
   &-bottomIcon {
     width: 40px;
+    animation: spin 4s linear 0s infinite;
+  }
+
+  &-bottomText {
+    @include small-font;
+    margin-top: 20px;
   }
 }
+
+@keyframes spin { 100% { transform: rotate(360deg); } }

@@ -2,15 +2,20 @@
 @import "./mixins.scss";
 
 .about {
+  &-container {
+    padding: $section-padding-mobile 20px;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to("medium") {
+      padding: $section-padding 20px;
+    }
+  }
+
   &-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
-
-    @include respond-to("medium") {
-      padding-top: 60px;
-    }
   }
 
   &-title {
@@ -28,7 +33,7 @@
   }
 
   &-description {
-    padding: 0 20px 60px;
+    padding: 0 20px;
     text-align: justify;
     @include medium-font();
 

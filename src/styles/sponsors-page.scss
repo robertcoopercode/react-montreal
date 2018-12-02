@@ -60,15 +60,23 @@
   &-sponsor {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 40px 30px;
-    padding: 20px;
+    padding: 20px 30px 40px;
     border: 3px solid $highlight;
     border-radius: 2px;
+    position: relative;
+  }
+
+  &-sponsorImage {
+    width: 140px;
   }
 
   &-sponsorName {
     @include small-font();
     font-weight: 500;
+    position: absolute;
+    bottom: 20px;
   }
 }

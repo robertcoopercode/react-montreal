@@ -30,6 +30,7 @@ export const FooterTemplate = ({ data }) => {
         )}
         <div className="footer-bottom">
           <img className="footer-bottomIcon" src={icon.image} alt={icon.imageAlt} />
+          <span className="footer-bottomText">Website proudly built with React.js</span>
         </div>
       </div>
     </nav>
