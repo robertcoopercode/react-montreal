@@ -4,6 +4,9 @@ headerImage:
   image: /img/react-1-.svg
   imageAlt: JavaScript Montreal
 title: Meet other React Developers in Montreal
+headerButton:
+  headerButtonLabel: Join us on meetup.com
+  headerButtonLink: 'https://www.meetup.com/React-MTL/'
 upcomingMeetupHeading: Upcoming Meetup
 noUpcomingMeetupText: Details to be announced.
 mapsNote: Clicking the pin opens Google Maps in a new tab.
