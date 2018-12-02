@@ -172,8 +172,8 @@ collections:
             widget: "object",
             fields: 
               [
-                { label: "Label", name: "headerButtonLabel", widget: "string" },
-                { label: "External Link", name: "headerButtonLink", widget: "string" },
+                { label: "Label", name: "label", widget: "string" },
+                { label: "External Link", name: "link", widget: "string" },
               ],
             }
           - { label: "Upcoming Meetup Heading", name: "upcomingMeetupHeading", widget: "string" }
