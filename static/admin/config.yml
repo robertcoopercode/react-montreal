@@ -169,7 +169,7 @@ collections:
           }
           - {
               label: "List of Sponsors",
-              name: "sponsorList",
+              name: "sponsorsList",
               widget: "list",
               fields:
                 [
@@ -235,7 +235,18 @@ collections:
             fields: 
               [
                 { label: "Label", name: "label", widget: "string" },
-                { label: "External Link", name: "link", widget: "string" },
+                {
+                  label: "Link Type",
+                  name: "linkType",
+                  widget: "select",
+                  options: ["internal", "external"],
+                },
+                {
+                  label: "Link URL",
+                  name: "linkURL",
+                  widget: "string",
+                  hint: "Use a relative URL (e.g. /about) if the link is an internal link.",
+                }
               ],
             }
           - { label: "Upcoming Meetup Heading", name: "upcomingMeetupHeading", widget: "string" }

@@ -5,7 +5,7 @@ callToAction:
   label: Contact Us
   link: 'mailto:info@letsreact.io'
   text: Interested in sponsoring the meetup?
-sponsorList:
+sponsorsList:
   - link: 'https://www.123loadboard.com/'
     logo: /img/image.svg
     name: 123Loadboard

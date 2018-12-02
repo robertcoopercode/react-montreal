@@ -11,27 +11,33 @@ import HTMLContent from "../components/Content";
 import "../styles/sponsors-page.scss";
 
 export const SponsorsPageTemplate = ({
-  title,
+  data,
   content,
   bodyIsMarkdown = false,
 }) => {
   return (
     <article className="sponsorsPage">
       <div className="container  sponsorsPage-container">
-        <h1 className="sponsorsPage-title">{title}</h1>
-        {/* {bodyIsMarkdown ? (
-          <ReactMarkdown className="pastMeetups-description" source={content} />
+        <h1 className="sponsorsPage-title">{data.title}</h1>
+        {bodyIsMarkdown ? (
+          <ReactMarkdown className="sponsorsPage-description" source={content} />
         ) : (
-          <HTMLContent className="pastMeetups-description" content={content} />
+          <HTMLContent className="sponsorsPage-description" content={content} />
         )}
-        {meetups &&
-          meetups.map((meetup, index) => (
-            <MeetupTemplate
-              key={index}
-              className="pastMeetups-meetup"
-              meetup={meetup.node.frontmatter}
-            />
-          ))} */}
+        <div className="sponsorsPage-callToActionContainer">
+          <span>{data.callToAction.text}</span>
+          <a href={data.callToAction.link}>{data.callToAction.label}</a>
+        </div>
+        {data.sponsorsList && (
+          <div className="sponsorsPage-sponsors">
+            {data.sponsorsList.map((sponsor) => (
+              <div>
+                <img src={sponsor.logo} alt={sponsor.name} />
+                <span>{sponsor.name}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </article>
   );
@@ -59,7 +65,7 @@ const SponsorsPage = ({ data }) => {
         <title>{browserTitle}</title>
       </Helmet>
       <SponsorsPageTemplate
-        title={page.frontmatter.title}
+        data={page.frontmatter}
         content={page.html}
       />
     </Layout>
@@ -82,6 +88,16 @@ export const sponsorsPageQuery = graphql`
           browserTitle
           title
           description
+        }
+        callToAction {
+          label
+          link
+          text
+        }
+        sponsorsList {
+          link
+          logo
+          name
         }
       }
     }
