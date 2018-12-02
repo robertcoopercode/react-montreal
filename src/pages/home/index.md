@@ -10,6 +10,10 @@ headerButton:
   linkURL: 'https://www.meetup.com/React-MTL/'
 upcomingMeetupHeading: Upcoming Meetup
 noUpcomingMeetupText: Details to be announced.
+upcomingMeetupCTA:
+  label: Tell us you're attending!
+  linkType: external
+  linkURL: 'https://www.meetup.com/React-MTL/'
 callToActions:
   firstCTA:
     heading: Sponsor the Meetup
@@ -21,6 +25,11 @@ callToActions:
     linkType: external
     linkURL: 'mailto:info@letsreact.io'
     subHeading: Want to present at an upcoming meetup? Contact us.
+recentMeetupHeading: Recent Meetups
+recentMeetupCTA:
+  label: View all past meetups
+  linkType: internal
+  linkURL: /meetups
 seo:
   browserTitle: React Montreal
   description: >-
