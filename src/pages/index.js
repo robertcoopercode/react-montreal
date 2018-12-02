@@ -20,7 +20,7 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
         <div className="header-container  container">
           {home.headerImage && <img className="header-image" src={home.headerImage.image} alt={home.headerImage.imageAlt} />}
           <h3 className="header-tagline">
-            <span className="header-taglinePart">{home.title}</span>
+            {home.title}
           </h3>
         </div>
       </section>

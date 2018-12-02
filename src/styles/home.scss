@@ -3,7 +3,7 @@
 
 .header {
   height: 450px;
-  background-color: $background-medium;
+  background: $background-gradient;
 
   @include respond-to("medium") {
     height: 575px;
@@ -55,11 +55,6 @@
     @include respond-to("medium") {
       flex-basis: 500px;
     }
-  }
-
-  &-taglinePart {
-    display: inline;
-    @include title-link-border();
   }
 }
 
