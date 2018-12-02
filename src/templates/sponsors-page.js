@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
 import Helmet from "react-helmet";
+import PropTypes from "prop-types";
+import React from "react";
 import ReactMarkdown from "react-markdown";
+import { graphql } from "gatsby";
 
-import Layout from "../components/Layout";
-import HTMLContent from "../components/Content";
 import "../styles/sponsors-page.scss";
+import HTMLContent from "../components/Content";
+import Layout from "../components/Layout";
 
 export const SponsorsPageTemplate = ({
   data,
@@ -22,17 +22,17 @@ export const SponsorsPageTemplate = ({
         ) : (
           <HTMLContent className="sponsorsPage-description" content={content} />
         )}
-        <div className="sponsorsPage-callToActionContainer">
-          <span>{data.callToAction.text}</span>
-          <a href={data.callToAction.link}>{data.callToAction.label}</a>
+        <div className="sponsorsPage-ctaContainer">
+          <span className="sponsorsPage-ctaText">{data.callToAction.text}</span>
+          <a className="sponsorsPage-ctaLink" href={data.callToAction.link}>{data.callToAction.label}</a>
         </div>
         {data.sponsorsList && (
           <div className="sponsorsPage-sponsors">
             {data.sponsorsList.map((sponsor) => (
-              <div>
-                <img src={sponsor.logo} alt={sponsor.name} />
-                <span>{sponsor.name}</span>
-              </div>
+              <a className="sponsorsPage-sponsor" href={sponsor.link} rel="noopener noreferrer">
+                <img className="sponsorsPage-sponsorImage" src={sponsor.logo} alt={sponsor.name} />
+                <span className="sponsorsPage-sponsorName">{sponsor.name}</span>
+              </a>
             ))}
           </div>
         )}

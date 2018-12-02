@@ -1,15 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
 import Helmet from "react-helmet";
+import PropTypes from "prop-types";
+import React from "react";
 import isAfter from "date-fns/is_after";
 import isBefore from "date-fns/is_before";
-import { Link } from 'gatsby';
+import { graphql } from "gatsby";
 
+import "../styles/home.scss";
+import CustomLink from "../components/CustomLink";
 import Layout from "../components/Layout";
 import Meetup from "../templates/meetup";
-import CustomLink from "../components/CustomLink";
-import "../styles/home.scss";
 
 export const HomePageTemplate = ({ home, upcomingMeetup = null, recentMeetups = [] }) => {
   return (

@@ -1,12 +1,11 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
-.pastMeetups {
+.sponsorsPage {
   &-container {
     padding: $section-padding-mobile 20px;
     display: flex;
     flex-direction: column;
-    margin-bottom: -40px;
 
     @include respond-to("medium") {
       padding: $section-padding 20px;
@@ -28,14 +27,48 @@
     @include medium-font();
     width: 900px;
     max-width: 100%;
-    margin: 0 auto 20px;
+    margin: 0 auto 40px;
   }
 
-  &-meetup {
-    margin: 20px 0;
+  &-ctaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
 
-    @include respond-to("medium") {
-      margin-bottom: 40px;
+  &-ctaText {
+    @include medium-font();
+    margin-right: 40px;
+    font-weight: 400;
+
+    @include respond-to('medium') {
+      font-size: 26px;
     }
+  }
+
+  &-ctaLink {
+    @include large-button($background-dark);
+  }
+
+  &-sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &-sponsor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 30px;
+    padding: 20px;
+    border: 3px solid $highlight;
+    border-radius: 2px;
+  }
+
+  &-sponsorName {
+    @include small-font();
+    font-weight: 500;
   }
 }
