@@ -21,9 +21,13 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null, recentMeetups = 
             <h3 className="header-tagline">
               {home.title}
             </h3>
-            {/* <a className="header-link" href={home.headerButton.link}>
+            <CustomLink
+              linkType={home.headerButton.linkType}
+              linkURL={home.headerButton.linkURL}
+              className="header-link"
+            >
               {home.headerButton.label}
-            </a> */}
+            </CustomLink>
           </div>
         </div>
       </section>
@@ -142,6 +146,8 @@ export const pageQuery = graphql`
             }
             headerButton {
               label
+              linkType
+              linkURL
             }
             upcomingMeetupHeading
             noUpcomingMeetupText

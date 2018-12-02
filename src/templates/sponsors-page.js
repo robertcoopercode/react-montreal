@@ -2,10 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
-import isBefore from "date-fns/is_before";
 import ReactMarkdown from "react-markdown";
 
-import MeetupTemplate from "./meetup";
 import Layout from "../components/Layout";
 import HTMLContent from "../components/Content";
 import "../styles/sponsors-page.scss";

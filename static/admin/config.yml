@@ -251,6 +251,27 @@ collections:
             }
           - { label: "Upcoming Meetup Heading", name: "upcomingMeetupHeading", widget: "string" }
           - { label: "No Upcoming Meetup Text", name: "noUpcomingMeetupText", hint: "This text will be displayed when there are no upcoming meetups", required: true, widget: "string" }
+          - { 
+            label: "Upcoming Meetup CTA",
+            name: "upcomingMeetupCTA",
+            widget: "object",
+            fields: 
+              [
+                { label: "Label", name: "label", widget: "string" },
+                {
+                  label: "Link Type",
+                  name: "linkType",
+                  widget: "select",
+                  options: ["internal", "external"],
+                },
+                {
+                  label: "Link URL",
+                  name: "linkURL",
+                  widget: "string",
+                  hint: "Use a relative URL (e.g. /about) if the link is an internal link.",
+                }
+              ],
+            }
           - {
               label: "Call to Actions",
               name: "callToActions",
@@ -305,6 +326,28 @@ collections:
                       ]
                   }
                 ],
+            }
+          - { label: "Recent Meetup Heading", name: "recentMeetupHeading", widget: "string" }
+          - { 
+            label: "Recent Meetup CTA",
+            name: "recentMeetupCTA",
+            widget: "object",
+            fields: 
+              [
+                { label: "Label", name: "label", widget: "string" },
+                {
+                  label: "Link Type",
+                  name: "linkType",
+                  widget: "select",
+                  options: ["internal", "external"],
+                },
+                {
+                  label: "Link URL",
+                  name: "linkURL",
+                  widget: "string",
+                  hint: "Use a relative URL (e.g. /about) if the link is an internal link.",
+                }
+              ],
             }
           - {
               label: "SEO & Meta",
