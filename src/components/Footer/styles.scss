@@ -72,20 +72,14 @@
     margin-right: 20px;
   }
 
-  &-flag {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 2rem;
-    padding-top: 20px;
-
-    @include respond-to("small") {
-      margin-left: auto;
-    }
-  }
-
   &-bottom {
     margin-top: auto;
     width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-bottomIcon {
+    width: 40px;
   }
 }
