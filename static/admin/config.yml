@@ -83,16 +83,6 @@ collections:
                 ],
             }
           - { label: "Body", name: "body", widget: "markdown" }
-          - {
-              label: "Image Gallery",
-              name: "gallery",
-              widget: "list",
-              fields:
-                [
-                  { label: "Image", name: "image", widget: "image" },
-                  { label: "Image Description", name: "imageAlt", widget: "string" },
-                ],
-            }
           - { label: "Developer Groups", name: "developerGroups", widget: "markdown" }
           - {
               label: "Meetup Organizers",

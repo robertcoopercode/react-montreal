@@ -30,13 +30,6 @@ export const AboutPageTemplate = props => {
           ) : (
             <HTMLContent className="about-description" content={page.html} />
           )}
-          <ul className="about-gallery  galleryList">
-            {page.frontmatter.gallery.map((galleryImage, index) => (
-              <li key={index} className="galleryList-item">
-                <img src={galleryImage.image} alt={galleryImage.imageAlt} />
-              </li>
-            ))}
-          </ul>
         </section>
       </div>
       <section className="section  developerGroups  about-developerGroups">
@@ -98,10 +91,6 @@ export const aboutPageQuery = graphql`
       frontmatter {
         title
         mainImage {
-          image
-          imageAlt
-        }
-        gallery {
           image
           imageAlt
         }
