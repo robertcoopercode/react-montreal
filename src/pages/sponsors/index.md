@@ -9,11 +9,11 @@ sponsorsList:
   - link: 'https://www.123loadboard.com/'
     logo: /img/image.svg
     name: 123Loadboard
-  - link: 'https://www.123loadboard.com/'
-    logo: /img/image.svg
+  - link: 'https://www.zenika.com/'
+    logo: /img/zenika-logo.png
     name: Zenika
-  - link: 'https://www.123loadboard.com/'
-    logo: /img/image.svg
+  - link: 'https://breather.com/'
+    logo: /img/breather-logo.svg
     name: Breather
 seo:
   browserTitle: Sponsors | React Montreal
