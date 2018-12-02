@@ -1,6 +1,6 @@
 ---
 templateKey: about-page
-title: Wakanda JavaScript Developer Meetup
+title: React Montreal Developer Meetup
 mainImage:
   image: /img/teemu-paananen-376238-unsplash.jpg
   imageAlt: Wakanda JavaScript developer presenting at a meetup.
@@ -12,9 +12,9 @@ gallery:
   - image: /img/annie-spratt-608001-unsplash.jpg
     imageAlt: Wakanda developers working together at a table.
 developerGroups: |-
-  ## Other Wakanda Developer Groups
+  ## Other Montreal Developer Groups
 
-  * [React & React Native Meetup](https://www.google.com)
+  * [Javascript Meetup](http://js-montreal.org/)
   * [Python Meetup](https://www.google.com)
   * [Google Developer Meetup](https://www.google.com)
   * [Vue.js Meetup](https://www.google.com)
