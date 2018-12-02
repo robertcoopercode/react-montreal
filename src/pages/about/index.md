@@ -22,12 +22,12 @@ developerGroups: |-
 organizers:
   title: Group Organizers
   gallery:
-    - image: /img/organizer-1.jpg
-      imageAlt: Tom Cruise
-      name: Tom Cruise
-    - image: /img/organizer-2.jpg
-      imageAlt: Tom Hanks
-      name: Tom Hanks
+    - image: /img/placeholder.png
+      imageAlt: Kenza Iraki
+      name: Kenza Iraki
+    - image: /img/placeholder.png
+      imageAlt: Nicolas Cuillery
+      name: Nicolas Cuillery
 seo:
   browserTitle: About | React Montreal
   description: >-
