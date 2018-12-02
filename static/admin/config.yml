@@ -157,6 +157,28 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
           - {
+              label: "Call to Action",
+              name: "callToAction",
+              widget: "object",
+              fields:
+                [
+                  { label: "Text", name: "text", widget: "string"},
+                  { label: "Button Label", name: "label", widget: "string"},
+                  { label: "Button Link", name: "link", widget: "string"},
+                ]
+          }
+          - {
+              label: "List of Sponsors",
+              name: "sponsorList",
+              widget: "list",
+              fields:
+                [
+                  { label: "Name", name: "name", widget: "string" },
+                  { label: "Logo", name: "logo", widget: "image"},
+                  { label: "Link", name: "link", widget: "string"},
+                ],
+            }
+          - {
               label: "SEO & Meta",
               name: "seo",
               widget: "object",
