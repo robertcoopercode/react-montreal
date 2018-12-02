@@ -1,9 +1,9 @@
 ---
 templateKey: home-page
 headerImage:
-  image: /img/television.png
-  imageAlt: JavaScript Wakanda
-title: Meet other JavaScript Developers in Wakanda
+  image: /img/react-1-.svg
+  imageAlt: JavaScript Montreal
+title: Meet other React Developers in Montreal
 upcomingMeetupHeading: Upcoming Meetup
 noUpcomingMeetupText: Details to be announced.
 mapsNote: Clicking the pin opens Google Maps in a new tab.
