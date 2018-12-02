@@ -6,10 +6,10 @@ headerImage:
 title: Meet other React Developers in Montreal
 headerButton:
   label: Join us on meetup.com
-  link: 'https://www.meetup.com/React-MTL/'
+  linkType: external
+  linkURL: 'https://www.meetup.com/React-MTL/'
 upcomingMeetupHeading: Upcoming Meetup
 noUpcomingMeetupText: Details to be announced.
-mapsNote: Clicking the pin opens Google Maps in a new tab.
 callToActions:
   firstCTA:
     heading: Sponsor the Meetup
