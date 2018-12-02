@@ -33,7 +33,7 @@ class MeetupTemplate extends Component {
               </div>
               <div className="meetup-presenterInfo">
                 {presenter.presentationTitle && (
-                  <h3 className="meetup-presenterTitle">{presenter.presentationTitle}</h3>
+                  <h4 className="meetup-presenterTitle">{presenter.presentationTitle}</h4>
                 )}
                 <p className="meetup-presenterText">{presenter.text}</p>
                 <ul className="meetup-presenterLinks">
@@ -49,6 +49,23 @@ class MeetupTemplate extends Component {
               </div>
             </div>
           ))}
+        </div>
+        <div className="meetup-sponsors">
+            <h3>Thanks to our Sponsors</h3>
+            <div className="meetup-sponsor">
+              <img className="meetup-sponsorImage" src={HeadshotPlaceholder} alt={"Default headshot placeholder"} />
+              <h4 className="meetup-sponsorName">Shopify</h4>
+            </div>
+            <div className="meetup-sponsorInfo">
+              <p className="meetup-sponsorText">Thanks to Shopify for sponsoring the venue location.</p>
+              <ul className="meetup-sponsorLinks">
+                <li className="meetup-sponsorLinkItem">
+                  <a className="meetup-sponsorLink" href="#">
+                    Work at Shopify
+                  </a>
+                </li>
+              </ul>
+            </div>
         </div>
       </section>
     );

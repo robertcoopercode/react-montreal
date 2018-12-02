@@ -53,6 +53,35 @@ collections:
             ],
         }
       - {
+          label: Sponsors,
+          name: sponsors,
+          required: true,
+          widget: list,
+          fields:
+            [
+              { label: Name, name: name, required: true, widget: string },
+              {
+                label: Logo,
+                name: logo,
+                required: true,
+                hint: "Please use a square logo",
+                widget: image,
+              },
+              { label: Text, name: text, required: true, widget: text },
+              {
+                label: Links,
+                name: links,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Text, name: linkText, widget: string },
+                    { label: URL, name: linkURL, widget: string },
+                  ],
+              },
+            ],
+        }
+      - {
           label: "Location",
           name: "location",
           required: true,

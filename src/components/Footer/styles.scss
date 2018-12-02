@@ -29,7 +29,7 @@
     flex-grow: 1;
     align-items: center;
     width: 100%;
-
+    
     @include respond-to("small") {
       flex-direction: row;
       justify-content: space-around;
@@ -62,9 +62,13 @@
     @include medium-font;
     font-weight: 400;
     text-decoration: none;
-    color: $body-light;
+    color: $menu-inactive;
     display: flex;
     align-items: center;
+
+    &:hover {
+      color: $menu-active;
+    }
   }
 
   &-socialLinkIcon {
