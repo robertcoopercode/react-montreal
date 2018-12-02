@@ -19,9 +19,14 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
       <section className="header">
         <div className="header-container  container">
           {home.headerImage && <img className="header-image" src={home.headerImage.image} alt={home.headerImage.imageAlt} />}
-          <h3 className="header-tagline">
-            {home.title}
-          </h3>
+          <div>
+            <h3 className="header-tagline">
+              {home.title}
+            </h3>
+            {/* <a className="header-link" href={home.headerButton.link}>
+              {home.headerButton.label}
+            </a> */}
+          </div>
         </div>
       </section>
       <section className="upcomingMeetup  section">
@@ -182,6 +187,10 @@ export const pageQuery = graphql`
               image
               imageAlt
             }
+            # headerButton {
+            #   label
+            #   link
+            # }
             upcomingMeetupHeading
             noUpcomingMeetupText
             mapsNote

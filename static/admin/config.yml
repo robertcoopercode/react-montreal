@@ -166,6 +166,16 @@ collections:
                 ],
             }
           - { label: "Title", name: "title", widget: "string" }
+          - { 
+            label: "Header Button",
+            name: "headerButton",
+            widget: "object",
+            fields: 
+              [
+                { label: "Label", name: "headerButtonLabel", widget: "string" },
+                { label: "External Link", name: "headerButtonLink", widget: "string" },
+              ],
+            }
           - { label: "Upcoming Meetup Heading", name: "upcomingMeetupHeading", widget: "string" }
           - { label: "No Upcoming Meetup Text", name: "noUpcomingMeetupText", hint: "This text will be displayed when there are no upcoming meetups", required: true, widget: "string" }
           - { label: "Maps Note", name: "mapsNote", required: true, widget: "string" }
