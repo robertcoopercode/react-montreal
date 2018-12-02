@@ -37,7 +37,13 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null, recentMeetups = 
           {upcomingMeetup ? (
             <>
               <Meetup meetup={upcomingMeetup} />
-              <a className="upcomingMeetup-link" href="#">Tell us you're attending!</a>
+              <CustomLink
+                linkType={home.upcomingMeetupCTA.linkType}
+                linkURL={home.upcomingMeetupCTA.linkURL}
+                className="upcomingMeetup-link"
+              >
+                {home.upcomingMeetupCTA.label}
+              </CustomLink>
             </>
           ) : (
             <p className="upcomingMeetup-detail">{home.noUpcomingMeetupText}</p>
@@ -70,12 +76,18 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null, recentMeetups = 
         recentMeetups && (
           <section className="recentMeetups  section">
             <div className="recentMeetups-container  container">
-              <h2 className="recentMeetups-title  home-sectionTitle">Recent Meetups</h2>
+              <h2 className="recentMeetups-title  home-sectionTitle">{home.recentMeetupHeading}</h2>
               {recentMeetups.map(meetup => (
                 <Meetup key={meetup.title} className="recentMeetups-meetup" meetup={meetup} />
               ))}
             </div>
-            <Link className="recentMeetups-link" to="/meetups">View all meetups</Link>
+            <CustomLink
+              linkType={home.recentMeetupCTA.linkType}
+              linkURL={home.recentMeetupCTA.linkURL}
+              className="recentMeetups-link"
+            >
+              {home.recentMeetupCTA.label}
+            </CustomLink>
           </section>
         )
       }
@@ -151,6 +163,11 @@ export const pageQuery = graphql`
             }
             upcomingMeetupHeading
             noUpcomingMeetupText
+            upcomingMeetupCTA {
+              label
+              linkType
+              linkURL
+            }
             callToActions {
               firstCTA {
                 heading
@@ -164,6 +181,12 @@ export const pageQuery = graphql`
                 linkType
                 linkURL
               }
+            }
+            recentMeetupHeading
+            recentMeetupCTA {
+              label
+              linkType
+              linkURL
             }
             seo {
               browserTitle
