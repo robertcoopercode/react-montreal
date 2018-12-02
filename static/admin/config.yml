@@ -144,6 +144,29 @@ collections:
                   { label: "Description", name: "description", widget: "string" },
                 ],
             }
+      - file: "src/pages/sponsors/index.md"
+        label: "Sponsors"
+        name: "sponsors"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "sponsors-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: "SEO & Meta",
+              name: "seo",
+              widget: "object",
+              fields:
+                [
+                  { label: "Browser Tab Title", name: "browserTitle", widget: "string"},
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Description", name: "description", widget: "string" },
+                ],
+            }
       - file: "src/pages/pastMeetups/index.md"
         label: "Past Meetups"
         name: "pastMeetups"
