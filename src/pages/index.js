@@ -5,27 +5,24 @@ import Helmet from "react-helmet";
 import isAfter from "date-fns/is_after";
 
 import Layout from "../components/Layout";
-import Map from "../components/Map";
 import HeadshotPlaceholder from "../img/headshot-placeholder.svg";
 import CustomLink from "../components/CustomLink";
 import "../styles/home.scss";
 
 export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
   const presenters = upcomingMeetup && upcomingMeetup.presenters;
-  const latitude = upcomingMeetup && parseFloat(upcomingMeetup.location.mapsLatitude);
-  const longitude = upcomingMeetup && parseFloat(upcomingMeetup.location.mapsLongitude);
   return (
     <>
       <section className="header">
         <div className="header-container  container">
           {home.headerImage && <img className="header-image" src={home.headerImage.image} alt={home.headerImage.imageAlt} />}
-          <div>
+          <div className="header-detailsContainer">
             <h3 className="header-tagline">
               {home.title}
             </h3>
-            {/* <a className="header-link" href={home.headerButton.link}>
+            <a className="header-link" href={home.headerButton.link}>
               {home.headerButton.label}
-            </a> */}
+            </a>
           </div>
         </div>
       </section>
@@ -60,19 +57,6 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
                   ))}
                 </div>
               )}
-              <p className="upcomingMeetup-mapNote">{home.mapsNote}</p>
-              <div className="upcomingMeetup-mapWrapper">
-                <Map
-                  isMarkerShown
-                  googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTxauB_VWpo0_8hWELlE3pN59uuHzxD-8&v=3.exp&libraries=geometry,drawing,places"
-                  loadingElement={<div style={{ height: `100%` }} />}
-                  containerElement={<div style={{ height: `100%` }} />}
-                  mapElement={<div style={{ height: `100%` }} />}
-                  link={upcomingMeetup.location.mapsLink}
-                  latitude={latitude}
-                  longitude={longitude}
-                />
-              </div>
             </>
           ) : (
             <p className="upcomingMeetup-detail">{home.noUpcomingMeetupText}</p>
@@ -168,8 +152,6 @@ export const pageQuery = graphql`
               presentationTitle
             }
             location {
-              mapsLatitude
-              mapsLongitude
               mapsLink
               name
             }
@@ -187,13 +169,12 @@ export const pageQuery = graphql`
               image
               imageAlt
             }
-            # headerButton {
-            #   label
-            #   link
-            # }
+            headerButton {
+              label
+              link
+            }
             upcomingMeetupHeading
             noUpcomingMeetupText
-            mapsNote
             callToActions {
               firstCTA {
                 heading

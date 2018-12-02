@@ -38,23 +38,31 @@
     }
   }
 
-  &-tagline {
-    @include xlarge-font();
+  &-detailsContainer {
     color: $body-light;
     width: 400px;
     text-align: center;
     cursor: default;
-
+    
     @include respond-to("small") {
       flex-basis: 430px;
       text-align: left;
       width: 50%;
       align-items: flex-start;
     }
-
+    
     @include respond-to("medium") {
       flex-basis: 500px;
     }
+  }
+  
+  &-tagline {
+    @include xlarge-font();
+    margin-bottom: 25px;
+  }
+
+  &-link {
+    @include large-button();
   }
 }
 
@@ -154,7 +162,7 @@
     @include respond-to("medium") {
       position: absolute;
       align-items: flex-end;
-      transition: box-shadow $transition-duration cubic-bezier(0.4, 0, 0.3, 1);
+      transition: box-shadow $medium-transition-duration cubic-bezier(0.4, 0, 0.3, 1);
     }
 
     &--first {
