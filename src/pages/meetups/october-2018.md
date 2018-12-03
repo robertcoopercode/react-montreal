@@ -12,7 +12,18 @@ presenters:
       reusable React components, as well as tools to document your React
       components.
 sponsors:
-  - {}
+  - links:
+      - linkText: Work at Busbud
+        linkURL: 'https://www.busbud.com/en-ca/careers'
+    logo: /img/busbud_logo.svg
+    name: Busbud
+    text: Thanks to Busbud for hosting the meetup at their office space.
+  - links:
+      - linkText: Work at You.i TV
+        linkURL: 'https://www.youi.tv/about/careers/'
+    logo: /img/youi-logo.png
+    name: You.i TV
+    text: Thanks to You.i TV for sponsor the food and drinks for this meetup.
 location:
   mapsLink: 'https://goo.gl/maps/Rm6ihxVrZGK2'
   name: Fairbanks Ice Museum
