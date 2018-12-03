@@ -3,7 +3,7 @@ templateKey: meetup
 title: September 2018
 date: 2018-09-27T22:00:00.000Z
 presenters:
-  - image: /img/edward-cisneros-415601-unsplash.jpg
+  - image: ''
     links: []
     name: Evan Glicakis
     presentationTitle: API Driven React applications
