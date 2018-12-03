@@ -65,6 +65,7 @@
     border-radius: calc(100px / 2);
     margin-bottom: 10px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
 
     @include respond-to("medium") {
       margin-bottom: 20px;

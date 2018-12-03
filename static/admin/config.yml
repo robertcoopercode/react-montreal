@@ -55,7 +55,7 @@ collections:
       - {
           label: Sponsors,
           name: sponsors,
-          required: true,
+          required: false,
           widget: list,
           fields:
             [
