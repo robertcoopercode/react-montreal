@@ -22,10 +22,10 @@ developerGroups: >-
   * [iOS Developer Meetup](https://www.meetup.com/CocoaHeads-Montreal/)
 organizers:
   gallery:
-    - image: /img/placeholder.png
+    - image: /img/placeholder.svg
       imageAlt: Kenza Iraki
       name: Kenza Iraki
-    - image: /img/placeholder.png
+    - image: /img/placeholder.svg
       imageAlt: Nicolas Cuillery
       name: Nicolas Cuillery
   title: Group Organizers
