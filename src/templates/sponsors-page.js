@@ -29,7 +29,7 @@ export const SponsorsPageTemplate = ({
         {data.sponsorsList && (
           <div className="sponsorsPage-sponsors">
             {data.sponsorsList.map((sponsor) => (
-              <a className="sponsorsPage-sponsor" href={sponsor.link} target="_blank" rel="noopener noreferrer">
+              <a key={sponsor.name} className="sponsorsPage-sponsor" href={sponsor.link} target="_blank" rel="noopener noreferrer">
                 <img className="sponsorsPage-sponsorImage" src={sponsor.logo} alt={sponsor.name} />
                 <span className="sponsorsPage-sponsorName">{sponsor.name}</span>
               </a>
@@ -42,13 +42,13 @@ export const SponsorsPageTemplate = ({
 };
 
 SponsorsPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
   content: PropTypes.string,
   meetups: PropTypes.array,
 };
 
-const SponsorsPage = ({ data }) => {
+const SponsorsPage = ({ data, location }) => {
   const { markdownRemark: page } = data;
+  const { pathname: currentPage } = location;
   const {
     frontmatter: {
       seo: { title: seoTitle, description: seoDescription, browserTitle },
@@ -56,7 +56,7 @@ const SponsorsPage = ({ data }) => {
   } = page;
 
   return (
-    <Layout footerData={data.footerData} navbarData={data.navbarData}>
+    <Layout footerData={data.footerData} navbarData={data.navbarData} currentPage={currentPage}>
       <Helmet>
         <meta name="title" content={seoTitle} />
         <meta name="description" content={seoDescription} />

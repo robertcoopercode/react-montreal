@@ -96,7 +96,7 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null, recentMeetups = 
 
 class HomePage extends React.Component {
   render() {
-    const { data } = this.props;
+    const { data, location: { pathname: currentPage } } = this.props;
     const {
       data: { footerData, navbarData },
     } = this.props;
@@ -120,7 +120,7 @@ class HomePage extends React.Component {
       }
     });
     return (
-      <Layout footerData={footerData} navbarData={navbarData}>
+      <Layout footerData={footerData} navbarData={navbarData} currentPage={currentPage}>
         <Helmet>
           <meta name="title" content={seoTitle} />
           <meta name="description" content={seoDescription} />

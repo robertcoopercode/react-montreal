@@ -56,8 +56,10 @@ export const AboutPageTemplate = props => {
   );
 };
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data, location }) => {
   const { markdownRemark: page, footerData, navbarData } = data;
+  const { pathname: currentPage } = location;
+  
   const {
     frontmatter: {
       seo: { title: seoTitle, description: seoDescription, browserTitle },
@@ -65,7 +67,7 @@ const AboutPage = ({ data }) => {
   } = page;
 
   return (
-    <Layout footerData={footerData} navbarData={navbarData}>
+    <Layout footerData={footerData} navbarData={navbarData} currentPage={currentPage}>
       <Helmet>
         <meta name="title" content={seoTitle} />
         <meta name="description" content={seoDescription} />

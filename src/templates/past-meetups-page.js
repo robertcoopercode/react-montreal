@@ -44,8 +44,9 @@ PastMeetupsPageTemplate.propTypes = {
   meetups: PropTypes.array,
 };
 
-const PastMeetupsPage = ({ data }) => {
+const PastMeetupsPage = ({ data, location }) => {
   const { markdownRemark: page } = data;
+  const { pathname: currentPage } = location;
   const {
     frontmatter: {
       seo: { title: seoTitle, description: seoDescription, browserTitle },
@@ -59,7 +60,7 @@ const PastMeetupsPage = ({ data }) => {
   });
 
   return (
-    <Layout footerData={data.footerData} navbarData={data.navbarData}>
+    <Layout footerData={data.footerData} navbarData={data.navbarData} currentPage={currentPage}>
       <Helmet>
         <meta name="title" content={seoTitle} />
         <meta name="description" content={seoDescription} />

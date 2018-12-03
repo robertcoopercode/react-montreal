@@ -3,7 +3,7 @@ import React from "react";
 import "./styles.scss";
 import CustomLink from "../CustomLink";
 
-export const NavbarTemplate = ({ data }) => (
+export const NavbarTemplate = ({ data, currentPage }) => (
   <nav className="navbar">
     <div className="container  navbar-container">
       {data.menuItems.length > 0 && (
@@ -13,7 +13,7 @@ export const NavbarTemplate = ({ data }) => (
               <CustomLink
                 linkType={menuItem.linkType}
                 linkURL={menuItem.linkURL}
-                className="navbar-menuLink"
+                className={currentPage === menuItem.linkURL ? "navbar-menuLink  navbar-menuLink--active" : "navbar-menuLink"}
               >
                 {menuItem.label}
               </CustomLink>
@@ -30,7 +30,7 @@ const Navbar = props => {
     return null;
   }
   const data = props.data.edges[0].node.frontmatter;
-  return <NavbarTemplate data={data} />;
+  return <NavbarTemplate data={data} currentPage={props.currentPage} />;
 };
 
 export { Navbar };
