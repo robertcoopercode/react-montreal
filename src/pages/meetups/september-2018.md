@@ -1,35 +1,23 @@
 ---
 templateKey: meetup
 title: September 2018
-date: 2018-09-11T22:00:00.000Z
+date: 2018-09-27T22:00:00.000Z
 presenters:
   - image: /img/edward-cisneros-415601-unsplash.jpg
-    links:
-      - linkText: Async/Await
-        linkURL: 'https://google.com/'
-      - linkText: Promises
-        linkURL: 'https://google.com/'
-    name: Brittany Vonn
-    presentationTitle: 'No sugar please: a tearing down of abstractions'
+    links: []
+    name: Evan Glicakis
+    presentationTitle: API Driven React applications
     text: >-
-      To demistify one of JS' hotest bits of syntax sugar and the familiar
-      Promise, Brittany will break down the mechanics of both async patterns by
-      building his own naive variations of those language features.
-  - image: /img/marius-ciocirlan-398931-unsplash.jpg
-    links:
-      - linkText: React Native
-        linkURL: 'https://facebook.github.io/react-native/'
-    name: Brian Kardashian
-    presentationTitle: React & React Native
+      Discover how you can move your application's data into it's on API to
+      increase the flexibility of your application's UI.
+sponsors:
+  - logo: /img/osedea-black.svg
+    name: Osedea
     text: >-
-      The folks at Turbulent have been working hard using React and React-Native
-      to bring quality, cross platform JS products to market. Today, they will
-      show us the patterns, structures and challenges of building large scale
-      cross platform apps.
+      Thanks to Osedea for providing the venue for the meetup along with food
+      and beverages for atendeees.
 location:
-  mapsLatitude: 64.843779
   mapsLink: 'https://goo.gl/maps/Rm6ihxVrZGK2'
-  mapsLongitude: -147.718189
   name: Fairbanks Ice Museum
 ---
 
