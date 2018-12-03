@@ -21,7 +21,7 @@ sponsors:
     name: Havas
     text: Thanks to Havas for allowing the meetup to use their space.
 location:
-  mapsLink: 'https://goo.gl/maps/LLgicn3zGuy'
-  name: Fairbanks Ice Museum
+  mapsLink: 'https://goo.gl/maps/bELL8C5YqF32'
+  name: Havas
 ---
 
