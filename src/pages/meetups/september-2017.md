@@ -3,7 +3,7 @@ templateKey: meetup
 title: September 2017
 date: 2017-09-28T17:00:00.000Z
 presenters:
-  - image: /img/kenza_grain_2.jpg
+  - image: /img/kenza_grain_square.jpg
     links:
       - linkText: Kenza's LinkedIn
         linkURL: 'https://www.linkedin.com/in/kenzairaki/'
