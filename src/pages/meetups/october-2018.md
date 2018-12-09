@@ -3,7 +3,7 @@ templateKey: meetup
 title: October 2018
 date: 2018-10-29T22:00:00.000Z
 presenters:
-  - image: ''
+  - image: /img/tim.jpeg
     links: []
     name: Timothée Clain
     presentationTitle: 'Reusable components in React: Techniques and Tools'
@@ -13,13 +13,13 @@ presenters:
       components.
 sponsors:
   - links:
-      - linkText: Work at Busbud
+      - linkText: Busbud is hiring!
         linkURL: 'https://www.busbud.com/en-ca/careers'
     logo: /img/busbud_logo.svg
     name: Busbud
     text: Thanks to Busbud for hosting the meetup at their office space.
   - links:
-      - linkText: Work at You.i TV
+      - linkText: You.i TV is hiring!
         linkURL: 'https://www.youi.tv/about/careers/'
     logo: /img/youi-logo.png
     name: You.i TV
