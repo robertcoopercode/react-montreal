@@ -1,7 +1,7 @@
 ---
 templateKey: meetup
 title: October 2018
-date: 2018-10-29T22:00:00.000Z
+date: 2018-10-29T23:00:00.000Z
 presenters:
   - image: /img/tim.jpeg
     links: []
