@@ -5,7 +5,7 @@
   background-color: $background-footer;
   @include medium-font;
   color: $body-light;
-  padding: 80px 20px;
+  padding: 40px 20px 50px;
 
   @include respond-to("small") {
     padding: 40px 20px;
@@ -25,7 +25,7 @@
       flex-direction: row;
     }
   }
-
+  
   &-socialMenu {
     display: flex;
     flex-direction: column;
@@ -36,29 +36,12 @@
     @include respond-to("small") {
       flex-direction: row;
       justify-content: space-around;
+      flex-wrap: wrap;
     }
-  }
-
-  &-about {
-    text-align: center;
-
-    @include respond-to("small") {
-      text-align: left;
-    }
-  }
-
-  &-aboutTitleImg {
-    max-height: 60px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  &-aboutDescription {
-    @include medium-font();
   }
 
   &-socialMenuItem {
-    padding: 15px 0;
+    padding: 15px 10px;
   }
 
   &-socialLink {
@@ -80,12 +63,16 @@
   }
 
   &-bottom {
-    margin-top: auto;
+    margin-top: 40px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+    @include respond-to("small") {
+      margin-top: auto;
+    }
   }
 
   &-bottomIcon {
