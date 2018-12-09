@@ -1,7 +1,7 @@
 ---
 templateKey: meetup
 title: September 2017
-date: 2017-09-28T17:00:00.000Z
+date: 2017-09-28T22:00:00.000Z
 presenters:
   - image: /img/kenza_grain_square.jpg
     links:
