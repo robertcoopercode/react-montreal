@@ -3,7 +3,8 @@ templateKey: meetup
 title: March 2018
 date: 2018-03-29T17:00:00.000Z
 presenters:
-  - links:
+  - image: /img/ebou.jpeg
+    links:
       - linkText: Ebou's LinkedIn
         linkURL: 'https://www.linkedin.com/in/ebou-jobe-082878106/'
     name: Ebou Jobe
@@ -21,6 +22,7 @@ sponsors:
   - links:
       - linkText: Mylo is hiring a React Native developer!
         linkURL: 'https://mylo.breezy.hr/'
+    logo: /img/mylo.jpg
     name: Mylo
     text: We thank Mylo for providing us with food and beverages.
 location:
