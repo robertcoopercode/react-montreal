@@ -3,7 +3,8 @@ templateKey: meetup
 title: September 2017
 date: 2017-09-28T17:00:00.000Z
 presenters:
-  - links:
+  - image: /img/kenza_grain_2.jpg
+    links:
       - linkText: Kenza's LinkedIn
         linkURL: 'https://www.linkedin.com/in/kenzairaki/'
     name: Kenza Iraki
@@ -12,7 +13,8 @@ presenters:
       Kenza is an early adopter of React Native and previously an iOS Developer.
       She'll give us her perspective on the differences between the developer
       experiences in iOS and React Native, and which one she preferred.
-  - links:
+  - image: /img/adrien.jpeg
+    links:
       - linkText: Adrien's LinkedIn
         linkURL: 'https://www.linkedin.com/in/adrienthiery/'
     name: Adrien Thiéry
