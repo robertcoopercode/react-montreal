@@ -25,7 +25,7 @@ sponsors:
     name: You.i TV
     text: Thanks to You.i TV for sponsor the food and drinks for this meetup.
 location:
-  mapsLink: 'https://goo.gl/maps/Rm6ihxVrZGK2'
-  name: Fairbanks Ice Museum
+  mapsLink: 'https://goo.gl/maps/Dtc8kSKB24q'
+  name: Busbud Office
 ---
 
