@@ -1,7 +1,7 @@
 ---
 templateKey: meetup
 title: October 2017
-date: 2017-10-26T17:57:00.000Z
+date: 2017-10-26T17:00:00.000Z
 presenters:
   - links:
       - linkText: Nicolas' LinkedIn
