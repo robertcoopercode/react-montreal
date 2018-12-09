@@ -24,7 +24,7 @@ sponsors:
     name: 123LoadBoard
     text: Thanks to 123LoadBoard for providing the pizzas for the attendees!
 location:
-  mapsLink: 'https://goo.gl/maps/Rm6ihxVrZGK2'
-  name: Fairbanks Ice Museum
+  mapsLink: 'https://goo.gl/maps/siL5Pykwjbn'
+  name: Osedea Office
 ---
 
