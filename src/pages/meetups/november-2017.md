@@ -1,7 +1,7 @@
 ---
 templateKey: meetup
 title: November 2017
-date: 2017-11-30T19:08:00.000Z
+date: 2017-11-30T18:00:00.000Z
 presenters:
   - image: /img/adrien.jpeg
     links:
