@@ -1,7 +1,7 @@
 ---
 templateKey: meetup
 title: August 2017
-date: 2017-08-31T17:00:00.000Z
+date: 2017-08-31T22:00:00.000Z
 presenters:
   - links:
       - linkText: Romain's LinkedIn
