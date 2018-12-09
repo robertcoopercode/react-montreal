@@ -15,10 +15,10 @@ socialLinks:
   - image: /img/facebook.svg
     imageAlt: Join our Facebook group
     label: facebook.com
-    linkURL: 'https://www.facebook.com/'
+    linkURL: 'https://web.facebook.com/letsreactio'
   - image: /img/email.svg
     imageAlt: Contact us by email
     label: email us
-    linkURL: 'mailto:info@letsreact.io'
+    linkURL: 'mailto:meetup@letsreact.io'
 ---
 
