@@ -17,7 +17,7 @@ upcomingMeetupCTA:
 callToActions:
   firstCTA:
     heading: Sponsor the Meetup
-    linkType: internal
+    linkType: external
     linkURL: 'mailto:meetup@letsreact.io'
     subHeading: Want to provide sponsorship for the meetup? Get in touch.
   secondCTA:
