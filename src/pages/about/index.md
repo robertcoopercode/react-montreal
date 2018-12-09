@@ -2,7 +2,7 @@
 templateKey: about-page
 title: React Montreal Developer Meetup
 mainImage:
-  image: /img/aboutimage.jpg
+  image: /img/img_0102.jpg
   imageAlt: Youi.tv presentation at the November 2018 meetup.
 developerGroups: >-
   ## Other Montreal Developer Groups
@@ -22,10 +22,10 @@ developerGroups: >-
   * [iOS Developer Meetup](https://www.meetup.com/CocoaHeads-Montreal/)
 organizers:
   gallery:
-    - image: /img/placeholder.svg
+    - image: /img/kenza_grain_square.jpg
       imageAlt: Kenza Iraki
       name: Kenza Iraki
-    - image: /img/placeholder.svg
+    - image: /img/nico.jpeg
       imageAlt: Nicolas Cuillery
       name: Nicolas Cuillery
   title: Group Organizers
@@ -39,4 +39,4 @@ seo:
 ---
 ## Sharing Ideas and Meeting Others
 
-If you're working with React and/or React Native, or interested in learning, this group is for you! We meet every month to discuss progress with React, new tools, features and libraries. As people working with a young technology with best practices still yet to emerge, our focus is on helping the Montreal React community grow, and providing each other with input and advice and sharing our latest findings.
+If you're working with React and/or React Native, or interested in learning, this group is for you! We meet every month to discuss progress with React, new tools, features and libraries. As people working with young technologies with best practices still that are still emerging, our focus is on helping the Montreal React community grow, and providing each other with input and advice and sharing our latest findings.
