@@ -17,6 +17,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: 100%;
+    max-width: $container-width;
+    padding: 0 $container-padding;
+    margin: auto;
 
     @include respond-to("small") {
       flex-direction: row;

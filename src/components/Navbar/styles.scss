@@ -4,6 +4,12 @@
   background-color: $background-header;
   height: $navbar-height;
 
+  .container {
+    max-width: $container-width;
+    padding: 0 $container-padding;
+    margin: auto;
+  }
+
   &-container {
     display: flex;
     height: 100%;

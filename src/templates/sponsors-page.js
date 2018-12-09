@@ -15,7 +15,7 @@ export const SponsorsPageTemplate = ({
 }) => {
   return (
     <article className="sponsorsPage">
-      <div className="container  sponsorsPage-container">
+      <div className="sponsorsPage-container">
         <h1 className="sponsorsPage-title">{data.title}</h1>
         {bodyIsMarkdown ? (
           <ReactMarkdown className="sponsorsPage-description" source={content} />

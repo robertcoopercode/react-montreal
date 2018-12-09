@@ -18,7 +18,7 @@ export const PastMeetupsPageTemplate = ({
 }) => {
   return (
     <article className="pastMeetups">
-      <div className="container  pastMeetups-container">
+      <div className="pastMeetups-container">
         <h1 className="pastMeetups-title">{title}</h1>
         {bodyIsMarkdown ? (
           <ReactMarkdown className="pastMeetups-description" source={content} />

@@ -2,7 +2,15 @@
 @import "./mixins.scss";
 
 .about {
+  .container {
+    max-width: $container-width;
+    padding: 0 $container-padding;
+    margin: auto;
+  }
+  
   &-container {
+    max-width: $container-width;
+    margin: auto;
     padding: $section-padding-mobile 20px;
     display: flex;
     flex-direction: column;

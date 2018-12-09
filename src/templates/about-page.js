@@ -13,7 +13,7 @@ export const AboutPageTemplate = props => {
 
   return (
     <article className="about">
-      <div className="about-container  container">
+      <div className="about-container">
         <section className="about-header">
           <h1 className="about-title">{page.frontmatter.title}</h1>
           <div className="about-imageWrapper">

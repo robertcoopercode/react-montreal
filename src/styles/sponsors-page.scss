@@ -3,6 +3,8 @@
 
 .sponsorsPage {
   &-container {
+    max-width: $container-width;
+    margin: auto;
     padding: $section-padding-mobile 20px;
     display: flex;
     flex-direction: column;

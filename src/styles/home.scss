@@ -1,6 +1,12 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
+.container {
+  max-width: $container-width;
+  padding: 0 $container-padding;
+  margin: auto;
+}
+
 .home-sectionTitle {
   @include xlarge-font;
   margin-bottom: 30px;
