@@ -3,7 +3,8 @@ templateKey: meetup
 title: October 2017
 date: 2017-10-26T17:00:00.000Z
 presenters:
-  - links:
+  - image: /img/nico.jpeg
+    links:
       - linkText: Nicolas' LinkedIn
         linkURL: 'https://www.linkedin.com/in/nicolas-cuillery-15237314a/'
     name: Nicolas Cuillery
