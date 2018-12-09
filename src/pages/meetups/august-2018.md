@@ -20,6 +20,12 @@ sponsors:
     logo: /img/logo-black.png
     name: Havas
     text: Thanks to Havas for allowing the meetup to use their space.
+  - links:
+      - linkText: Zenika Website
+        linkURL: 'https://www.zenika.com/'
+    logo: /img/zenika.png
+    name: Zenika
+    text: Thanks to Zenika for covering the cost of the pizzas and beers!
 location:
   mapsLink: 'https://goo.gl/maps/bELL8C5YqF32'
   name: Havas
