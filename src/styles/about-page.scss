@@ -7,7 +7,7 @@
     padding: 0 $container-padding;
     margin: auto;
   }
-  
+
   &-container {
     max-width: $container-width;
     margin: auto;
@@ -69,12 +69,20 @@
 
   ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    
+    @include respond-to("small") {
+      flex-direction: row;
+      width: (1 / 3) * 100%;
+    }
   }
 
   ul li {
-    width: (1 / 3) * 100%;
     margin-bottom: 20px;
+    
+    @include respond-to("small") {
+      width: (1 / 3) * 100%;
+    }
   }
 
   a {
