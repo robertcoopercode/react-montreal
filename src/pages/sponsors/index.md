@@ -27,6 +27,18 @@ sponsorsList:
   - link: 'https://www.samsao.co/'
     logo: /img/1_5xzlqy_b9inl3vwbl2ctfw.png
     name: Samsao
+  - link: 'http://bureaubilly.com/'
+    logo: /img/billy.png
+    name: Bureau Billy
+  - link: 'https://ca.havas.com/'
+    logo: /img/logo-black.png
+    name: Havas Montreal
+  - link: 'https://osedea.com/'
+    logo: /img/osedea-black.svg
+    name: Osedea
+  - link: 'https://www.youi.tv/'
+    logo: /img/youi-logo.png
+    name: You.i TV
 seo:
   browserTitle: Sponsors | React MTL
   description: >-
