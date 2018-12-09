@@ -130,7 +130,9 @@
 
   &-listItemImage {
     margin-bottom: 20px;
-    border-radius: 3px;
+    border-radius: calc(150px / 2);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
     width: 150px;
   }
 
