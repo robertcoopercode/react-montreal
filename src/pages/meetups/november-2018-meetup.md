@@ -3,7 +3,9 @@ title: January 2019
 date: 2019-01-31T23:00:00.000Z
 presenters:
   - image: /img/kenza_grain_square.jpg
-    links: []
+    links:
+      - linkText: Kenza's LinkedIn
+        linkURL: 'https://www.linkedin.com/in/kenzairaki/'
     name: Kenza Iraki
     presentationTitle: Crash course with React Hooks
     text: >-
