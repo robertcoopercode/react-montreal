@@ -18,6 +18,7 @@ presenters:
       considerations and tips/tricks you need to know to get started.
   - name: Eric Cote
     presentationTitle: React Lingui
+    text: TBD
 sponsors:
   - links:
       - linkText: Work at Breather
