@@ -16,6 +16,8 @@ presenters:
       and your team sooner rather than later. In this talk, Kenza will go in
       depth into Hooks, what problems they solve, and will share some important
       considerations and tips/tricks you need to know to get started.
+  - name: Eric Cote
+    presentationTitle: React Lingui
 sponsors:
   - links:
       - linkText: Work at Breather
