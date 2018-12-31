@@ -57,7 +57,7 @@ export const AboutPageTemplate = props => {
 };
 
 const AboutPage = ({ data, location }) => {
-  const { markdownRemark: page, footerData, navbarData } = data;
+  const { markdownRemark: page } = data;
   const { pathname: currentPage } = location;
   
   const {
@@ -67,7 +67,7 @@ const AboutPage = ({ data, location }) => {
   } = page;
 
   return (
-    <Layout footerData={footerData} navbarData={navbarData} currentPage={currentPage}>
+    <Layout currentPage={currentPage}>
       <Helmet>
         <meta name="title" content={seoTitle} />
         <meta name="description" content={seoDescription} />
@@ -110,6 +110,5 @@ export const aboutPageQuery = graphql`
         }
       }
     }
-    ...LayoutFragment
   }
 `;

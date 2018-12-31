@@ -94,7 +94,6 @@ export const pastMeetupsPageQuery = graphql`
         }
       }
     }
-    ...LayoutFragment
     ...MeetupFragment
   }
 `;

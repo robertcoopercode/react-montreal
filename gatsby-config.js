@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter",
+    siteUrl: 'https://meetup.letsreact.io',
+    title: 'React MTL',
+    description: `The front end web development blog and project portfolio of Robert Cooper, a Canadian web developer and consultant.`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -37,6 +39,18 @@ module.exports = {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/img/favicon.png",
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'React MTL',
+        short_name: 'React MTL',
+        start_url: '/',
+        background_color: '#fff',
+        theme_color: '#114fe6',
+        display: 'standalone',
+        icon: 'src/img/favicon.png',
       },
     },
     "gatsby-plugin-netlify", // make sure to keep it last in the array

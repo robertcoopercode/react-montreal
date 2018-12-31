@@ -99,6 +99,5 @@ export const sponsorsPageQuery = graphql`
         }
       }
     }
-    ...LayoutFragment
   }
 `;

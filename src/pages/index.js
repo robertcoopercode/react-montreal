@@ -1,4 +1,3 @@
-import Helmet from "react-helmet";
 import PropTypes from "prop-types";
 import React from "react";
 import isAfter from "date-fns/is_after";
@@ -97,13 +96,7 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null, recentMeetups = 
 class HomePage extends React.Component {
   render() {
     const { data, location: { pathname: currentPage } } = this.props;
-    const {
-      data: { footerData, navbarData },
-    } = this.props;
     const { frontmatter: home } = data.homePageData.edges[0].node;
-    const {
-      seo: { title: seoTitle, description: seoDescription, browserTitle },
-    } = home;
     let upcomingMeetup = null;
     let recentMeetups = [];
     // Find the next meetup that is closest to today
@@ -120,12 +113,7 @@ class HomePage extends React.Component {
       }
     });
     return (
-      <Layout footerData={footerData} navbarData={navbarData} currentPage={currentPage}>
-        <Helmet>
-          <meta name="title" content={seoTitle} />
-          <meta name="description" content={seoDescription} />
-          <title>{browserTitle}</title>
-        </Helmet>
+      <Layout currentPage={currentPage} seo={home.seo}>
         <HomePageTemplate home={home} upcomingMeetup={upcomingMeetup} recentMeetups={recentMeetups} />
       </Layout>
     );
@@ -144,7 +132,6 @@ export default HomePage;
 
 export const pageQuery = graphql`
   query HomePageQuery {
-    ...LayoutFragment
     ...MeetupFragment
     homePageData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "home-page" } } }) {
       edges {
