@@ -178,6 +178,7 @@ export const pageQuery = graphql`
               browserTitle
               title
               description
+              image
             }
           }
         }

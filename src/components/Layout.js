@@ -11,6 +11,13 @@ const TemplateWrapper = ({ seo = { title: null, description: null, image: null, 
   <StaticQuery
     query={graphql`
       query {
+        site {
+          siteMetadata {
+            siteUrl
+            title
+            description
+          }
+        }
         footerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "footer" } } }) {
           edges {
             node {
@@ -46,32 +53,35 @@ const TemplateWrapper = ({ seo = { title: null, description: null, image: null, 
         }
       }
     `}
-    render={data => (
-      <div>
-        <Helmet>
-          <html lang="en" />
-          <title>{seo.browserTitle}</title>
-          <meta name="description" content={seo.description} />
+    render={data => {
+      // TODO: add fallback to detault image
+      const imageURL = data.site.siteMetadata.siteUrl + seo.image;
 
-          {/* Twitter Card data */}
-          {/* Image should be 1600 x 900 px */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@letsreactio" />
-          <meta name="twitter:title" content={seo.title} />
-          <meta name="twitter:description" content={seo.description} />
-          <meta name="twitter:image" content={seo.image || 'defaultImage'} />
+      return (
+        <div>
+          <Helmet>
+            <html lang="en" />
+            <title>{seo.browserTitle || data.site.siteMetadata.title}</title>
+            <meta name="description" content={seo.description || data.site.siteMetadata.description} />
 
-          <meta property="og:title" content={seo.title} />
-          {/* <meta property="og:url" content="http://www.example.com/" /> */}
-          <meta property="og:image" content={seo.image || 'defaultImage'} />
-          <meta property="og:description" content={seo.description} /> 
-          <meta property="og:site_name" content="Site Name, i.e. Moz" />
-        </Helmet>
-        <Navbar data={data.navbarData} currentPage={currentPage} />
-        <main>{children}</main>
-        <Footer data={data.footerData} />
-      </div>
-    )}
+            {/* Twitter Card data */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@letsreactio" />
+            <meta name="twitter:title" content={seo.title || data.site.siteMetadata.title} />
+            <meta name="twitter:description" content={seo.description || data.site.siteMetadata.description} />
+            <meta name="twitter:image" content={imageURL} />
+
+            <meta property="og:title" content={seo.title || data.site.siteMetadata.title} />
+            <meta property="og:image" content={imageURL} />
+            <meta property="og:description" content={seo.description || data.site.siteMetadata.description} /> 
+            <meta property="og:site_name" content={data.site.siteMetadata.title} />
+          </Helmet>
+          <Navbar data={data.navbarData} currentPage={currentPage} />
+          <main>{children}</main>
+          <Footer data={data.footerData} />
+        </div>
+      );
+    }}
   >
 
   </StaticQuery>
