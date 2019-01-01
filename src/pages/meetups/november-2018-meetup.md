@@ -1,6 +1,7 @@
 ---
 title: January 2019
 date: 2019-01-31T23:00:00.000Z
+meetupURL: 'https://www.meetup.com/React-MTL#january-2019'
 presenters:
   - image: /img/kenza_grain_square.jpg
     links:
