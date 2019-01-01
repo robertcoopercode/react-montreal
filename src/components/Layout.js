@@ -18,6 +18,15 @@ const TemplateWrapper = ({ seo = { title: null, description: null, image: null, 
             description
           }
         }
+        seoData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "seo" } } }) {
+          edges {
+            node {
+              frontmatter {
+                image
+              }
+            }
+          }
+        }
         footerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "footer" } } }) {
           edges {
             node {
@@ -54,8 +63,12 @@ const TemplateWrapper = ({ seo = { title: null, description: null, image: null, 
       }
     `}
     render={data => {
-      // TODO: add fallback to detault image
-      const imageURL = data.site.siteMetadata.siteUrl + seo.image;
+      let imageURL;
+      if (seo.image) {
+        imageURL = data.site.siteMetadata.siteUrl + seo.image;
+      } else {
+        imageURL = data.site.siteMetadata.siteUrl + data.seoData.edges[0].node.frontmatter.image;
+      }
 
       return (
         <div>
