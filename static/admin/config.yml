@@ -413,4 +413,6 @@ collections:
         name: "data"
         fields:
           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "seo" }
+          - { label: "Site title", name: "siteTitle", widget: "string", hint: "Used as the fallback SEO page title."}
+          - { label: "Site description", name: "siteDescription", widget: "string", hint: "Used as the fallback SEO page description."}
           - { label: "Default social sharing image", name: "image", widget: "image", hint: "Recommended to use a 1600 x 900 px." }

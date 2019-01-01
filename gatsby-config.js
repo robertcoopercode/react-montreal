@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://meetup.letsreact.io',
     title: 'React MTL',
-    description: `The front end web development blog and project portfolio of Robert Cooper, a Canadian web developer and consultant.`,
+    description: `React MTL is a meetup group in Montreal where React developers get together for presentations and to meet others in the community.`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
