@@ -8,9 +8,16 @@ import HeadshotPlaceholder from "../img/headshot-placeholder.svg";
 
 class MeetupTemplate extends Component {
   render() {
+    const convertTitleToSlug = (title) => {
+      const lowercaseTitle = title.toLowerCase();
+      const result = lowercaseTitle.replace(' ', '-');
+  
+      return result;
+  }
     return (
       <section
         className={`meetup  ${this.props.className && this.props.className}`}
+        id={convertTitleToSlug(this.props.meetup.title)}
         key={this.props.meetup.rawDate}
       >
         <h2 className="meetup-title">{this.props.meetup.title}</h2>
