@@ -107,6 +107,7 @@ export const query = graphql`
           frontmatter {
             title
             rawDate: date
+            meetupURL
             presenters {
               name
               image

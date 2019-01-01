@@ -36,8 +36,8 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null, recentMeetups = 
             <>
               <Meetup meetup={upcomingMeetup} />
               <CustomLink
-                linkType={home.upcomingMeetupCTA.linkType}
-                linkURL={home.upcomingMeetupCTA.linkURL}
+                linkType="external"
+                linkURL={upcomingMeetup.meetupURL || home.upcomingMeetupCTA.linkURL}
                 className="upcomingMeetup-link"
               >
                 {home.upcomingMeetupCTA.label}
@@ -151,7 +151,6 @@ export const pageQuery = graphql`
             noUpcomingMeetupText
             upcomingMeetupCTA {
               label
-              linkType
               linkURL
             }
             callToActions {
