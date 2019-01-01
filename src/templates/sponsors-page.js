@@ -51,17 +51,12 @@ const SponsorsPage = ({ data, location }) => {
   const { pathname: currentPage } = location;
   const {
     frontmatter: {
-      seo: { title: seoTitle, description: seoDescription, browserTitle },
+      seo
     },
   } = page;
 
   return (
-    <Layout footerData={data.footerData} navbarData={data.navbarData} currentPage={currentPage}>
-      <Helmet>
-        <meta name="title" content={seoTitle} />
-        <meta name="description" content={seoDescription} />
-        <title>{browserTitle}</title>
-      </Helmet>
+    <Layout currentPage={currentPage} seo={seo}>
       <SponsorsPageTemplate
         data={page.frontmatter}
         content={page.html}
@@ -86,6 +81,7 @@ export const sponsorsPageQuery = graphql`
           browserTitle
           title
           description
+          image
         }
         callToAction {
           label

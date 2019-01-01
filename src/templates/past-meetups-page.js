@@ -49,7 +49,7 @@ const PastMeetupsPage = ({ data, location }) => {
   const { pathname: currentPage } = location;
   const {
     frontmatter: {
-      seo: { title: seoTitle, description: seoDescription, browserTitle },
+      seo
     },
   } = page;
   let meetups = data.meetupData.edges;
@@ -60,12 +60,7 @@ const PastMeetupsPage = ({ data, location }) => {
   });
 
   return (
-    <Layout footerData={data.footerData} navbarData={data.navbarData} currentPage={currentPage}>
-      <Helmet>
-        <meta name="title" content={seoTitle} />
-        <meta name="description" content={seoDescription} />
-        <title>{browserTitle}</title>
-      </Helmet>
+    <Layout seo={seo} currentPage={currentPage}>
       <PastMeetupsPageTemplate
         title={page.frontmatter.title}
         content={page.html}
@@ -91,6 +86,7 @@ export const pastMeetupsPageQuery = graphql`
           browserTitle
           title
           description
+          image
         }
       }
     }

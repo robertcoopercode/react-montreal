@@ -62,17 +62,12 @@ const AboutPage = ({ data, location }) => {
   
   const {
     frontmatter: {
-      seo: { title: seoTitle, description: seoDescription, browserTitle },
+      seo
     },
   } = page;
 
   return (
-    <Layout currentPage={currentPage}>
-      <Helmet>
-        <meta name="title" content={seoTitle} />
-        <meta name="description" content={seoDescription} />
-        <title>{browserTitle}</title>
-      </Helmet>
+    <Layout currentPage={currentPage} seo={seo}>
       <AboutPageTemplate page={{ ...page, bodyIsMarkdown: false }} />
     </Layout>
   );
@@ -107,6 +102,7 @@ export const aboutPageQuery = graphql`
           browserTitle
           title
           description
+          image
         }
       }
     }
