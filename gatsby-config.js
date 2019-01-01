@@ -1,8 +1,6 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://meetup.letsreact.io',
-    title: 'React MTL',
-    description: `React MTL is a meetup group in Montreal where React developers get together for presentations and to meet others in the community.`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
