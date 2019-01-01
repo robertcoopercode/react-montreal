@@ -80,7 +80,7 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null, recentMeetups = 
               ))}
             </div>
             <CustomLink
-              linkType={home.recentMeetupCTA.linkType}
+              linkType='external'
               linkURL={home.recentMeetupCTA.linkURL}
               className="recentMeetups-link"
             >
@@ -171,7 +171,6 @@ export const pageQuery = graphql`
             recentMeetupHeading
             recentMeetupCTA {
               label
-              linkType
               linkURL
             }
             seo {

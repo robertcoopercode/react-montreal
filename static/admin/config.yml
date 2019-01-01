@@ -17,6 +17,7 @@ collections:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "meetup" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Meetup.com URL", name: "meetupURL", widget: "string" }
       - {
           label: Presenters,
           name: presenters,
@@ -262,16 +263,10 @@ collections:
               [
                 { label: "Label", name: "label", widget: "string" },
                 {
-                  label: "Link Type",
-                  name: "linkType",
-                  widget: "select",
-                  options: ["internal", "external"],
-                },
-                {
-                  label: "Link URL",
+                  label: "Fallback Link URL",
                   name: "linkURL",
                   widget: "string",
-                  hint: "Use a relative URL (e.g. /about) if the link is an internal link.",
+                  hint: "This URL is only used if the current meetup does not have a link URL specified. Use a relative URL (e.g. /about) if the link is an internal link.",
                 }
               ],
             }
