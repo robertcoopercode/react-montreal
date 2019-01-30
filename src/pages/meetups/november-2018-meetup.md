@@ -3,7 +3,7 @@ title: January 2019
 date: 2019-01-31T23:00:00.000Z
 meetupURL: 'https://www.meetup.com/React-MTL/events/258265692/'
 presenters:
-  - image: /img/member_121964852.jpeg
+  - image: /img/eric_cote.jpeg
     name: Eric Cote
     presentationTitle: ' International React Apps using LinguiJS'
     text: TBD
