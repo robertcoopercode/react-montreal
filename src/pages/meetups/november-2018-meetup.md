@@ -1,24 +1,11 @@
 ---
 title: January 2019
 date: 2019-01-31T23:00:00.000Z
-meetupURL: 'https://www.meetup.com/React-MTL#january-2019'
+meetupURL: 'https://www.meetup.com/React-MTL/events/258265692/'
 presenters:
-  - image: /img/kenza_grain_square.jpg
-    links:
-      - linkText: Kenza's LinkedIn
-        linkURL: 'https://www.linkedin.com/in/kenzairaki/'
-    name: Kenza Iraki
-    presentationTitle: Crash course with React Hooks
-    text: >-
-      React Hooks are a recently approved feature in React that allows you to
-      completely forgo classes and build an entire application with functional
-      components only. They are officially coming to a Q1 minor release of React
-      (aka very soon), so learning how to use them is going to be useful to you
-      and your team sooner rather than later. In this talk, Kenza will go in
-      depth into Hooks, what problems they solve, and will share some important
-      considerations and tips/tricks you need to know to get started.
-  - name: Eric Cote
-    presentationTitle: React Lingui
+  - image: /img/member_121964852.jpeg
+    name: Eric Cote
+    presentationTitle: ' International React Apps using LinguiJS'
     text: TBD
 sponsors:
   - links:
