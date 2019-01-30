@@ -1,6 +1,6 @@
 ---
 title: January 2019
-date: 2019-01-31T23:00:00.000Z
+date: 2019-01-30T23:30:00.000Z
 meetupURL: 'https://www.meetup.com/React-MTL/events/258265692/'
 presenters:
   - image: /img/eric_cote.jpeg
