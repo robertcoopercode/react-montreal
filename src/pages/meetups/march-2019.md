@@ -24,11 +24,11 @@ sponsors:
     name: Breather
     text: Thanks to Breather for hosting the venue space for the meetup.
   - links:
-      - linkText: 'http://gorockit.ca/'
-        linkURL: Work at GO ROCK IT
+      - linkText: Work at GO ROCK IT
+        linkURL: 'http://gorockit.ca/'
     logo: /img/logo-gorockit.png
     name: GO ROCK IT
-    text: We thank 123LoadBoard for providing us with food and beverages.
+    text: We thank GO ROCK IT for providing us with food and beverages.
 location:
   mapsLink: 'https://goo.gl/maps/VmBfsCEJ8mz'
   name: Breather
