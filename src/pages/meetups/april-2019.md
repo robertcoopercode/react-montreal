@@ -2,7 +2,7 @@
 templateKey: meetup
 title: April 2019
 date: 2019-04-02T22:00:00.000Z
-meetupURL: 'https://www.meetup.com'
+meetupURL: 'https://www.meetup.com/React-MTL/events/259874665/'
 presenters:
   - image: /img/marvin.jpeg
     links:
