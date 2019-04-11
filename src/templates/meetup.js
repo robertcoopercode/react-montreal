@@ -108,6 +108,7 @@ export const query = graphql`
             title
             rawDate: date
             meetupURL
+            isUpcomingMeetup
             presenters {
               name
               image

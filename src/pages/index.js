@@ -100,12 +100,12 @@ class HomePage extends React.Component {
     let upcomingMeetup = null;
     let recentMeetups = [];
     // Find the next meetup that is closest to today
-    data.meetupData.edges.every(item => {
+    data.meetupData.edges.every((item, index) => {
       const { frontmatter: meetup } = item.node;
-      if (isAfter(meetup.rawDate, new Date())) {
+      if (index === 0 && meetup.isUpcomingMeetup) {
         upcomingMeetup = meetup;
         return true;
-      } else if (isBefore(meetup.rawDate, new Date()) && recentMeetups.length < 3) {
+      } else if (recentMeetups.length < 3) {
         recentMeetups.push(meetup);
         return true;
       } else {
