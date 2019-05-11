@@ -18,7 +18,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Meetup.com URL", name: "meetupURL", widget: "string" }
-      - { label: "Upcoming Meetup?", name: "isUpcomingMeetup", widget: "boolean", default: false }
+      - { label: "Upcoming Meetup?", name: "isUpcomingMeetup", required: false, widget: "boolean", default: false }
       - {
           label: Presenters,
           name: presenters,
@@ -41,7 +41,7 @@ collections:
                 widget: image,
               },
               { label: Text, name: text, required: true, widget: text },
-              { label: Video Presentation Link, name: videoURL, required: false, widget: text, hint: "Link to the recorded presentation" },
+              { label: Video Presentation Link, name: videoURL, required: false, widget: string, hint: "Link to the recorded presentation" },
               {
                 label: Links,
                 name: links,
