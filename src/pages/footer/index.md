@@ -20,5 +20,9 @@ socialLinks:
     imageAlt: Contact us by email
     label: email us
     linkURL: 'mailto:meetup@letsreact.io'
+  - image: /img/youtube.png
+    imageAlt: View our recorded meetups on YouTube
+    label: youtube.com
+    linkURL: 'https://www.youtube.com/channel/UCsjCkfuHZJDhR1p8QrhjwLA'
 ---
 
