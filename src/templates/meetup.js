@@ -59,7 +59,7 @@ class MeetupTemplate extends Component {
                     ))}
                 </ul>
               </div>
-              <a className="meetup-presenterVideo">View the video recording</a>
+              {presenter.videoURL && <a href={presenter.videoURL} target="_blank" className="meetup-presenterVideo">View the video recording</a>}
             </div>
           ))}
         </div>
@@ -116,6 +116,7 @@ export const query = graphql`
               image
               text
               presentationTitle
+              videoURL
               links {
                 linkText
                 linkURL
