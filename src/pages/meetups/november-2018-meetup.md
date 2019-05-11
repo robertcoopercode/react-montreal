@@ -7,7 +7,9 @@ presenters:
   - image: /img/eric_cote.jpeg
     name: Eric Cote
     presentationTitle: ' International React Apps using LinguiJS'
-    text: TBD
+    text: >-
+      Learn how to use LinguiJS to translate your React apps in multiple
+      languages.
     videoURL: 'https://youtu.be/tLDaSGMDNNM'
 sponsors:
   - links:
