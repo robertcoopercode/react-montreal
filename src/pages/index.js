@@ -49,26 +49,28 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null, recentMeetups = 
         </div>
       </section>
       <section className="ctaBlock">
-        <CustomLink
-          linkType={home.callToActions.firstCTA.linkType}
-          linkURL={home.callToActions.firstCTA.linkURL}
-          className="ctaBlock-pattern  ctaBlock-pattern--first"
-        >
-          <div className="ctaBlock-cta">
-            <span className="ctaBlock-ctaHeading">{home.callToActions.firstCTA.heading}</span>
-            <p className="ctaBlock-ctaDescription">{home.callToActions.firstCTA.subHeading}</p>
-          </div>
-        </CustomLink>
-        <CustomLink
-          linkType={home.callToActions.secondCTA.linkType}
-          linkURL={home.callToActions.secondCTA.linkURL}
-          className="ctaBlock-pattern  ctaBlock-pattern--second"
-        >
-          <div className="ctaBlock-cta">
-            <span className="ctaBlock-ctaHeading">{home.callToActions.secondCTA.heading}</span>
-            <p className="ctaBlock-ctaDescription">{home.callToActions.secondCTA.subHeading}</p>
-          </div>
-        </CustomLink>
+        <div className="ctaBlock-container container">
+          <CustomLink
+            linkType={home.callToActions.firstCTA.linkType}
+            linkURL={home.callToActions.firstCTA.linkURL}
+            className="ctaBlock-pattern  ctaBlock-pattern--first"
+          >
+            <div className="ctaBlock-cta">
+              <span className="ctaBlock-ctaHeading">{home.callToActions.firstCTA.heading}</span>
+              <p className="ctaBlock-ctaDescription">{home.callToActions.firstCTA.subHeading}</p>
+            </div>
+          </CustomLink>
+          <CustomLink
+            linkType={home.callToActions.secondCTA.linkType}
+            linkURL={home.callToActions.secondCTA.linkURL}
+            className="ctaBlock-pattern  ctaBlock-pattern--second"
+          >
+            <div className="ctaBlock-cta">
+              <span className="ctaBlock-ctaHeading">{home.callToActions.secondCTA.heading}</span>
+              <p className="ctaBlock-ctaDescription">{home.callToActions.secondCTA.subHeading}</p>
+            </div>
+          </CustomLink>
+        </div>
       </section>
       {
         recentMeetups && (

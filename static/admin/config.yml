@@ -41,6 +41,7 @@ collections:
                 widget: image,
               },
               { label: Text, name: text, required: true, widget: text },
+              { label: Video Presentation Link, name: text, required: false, widget: text, hint: "Link to the recorded presentation" },
               {
                 label: Links,
                 name: links,

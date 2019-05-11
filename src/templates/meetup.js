@@ -11,7 +11,7 @@ class MeetupTemplate extends Component {
     const convertTitleToSlug = (title) => {
       const lowercaseTitle = title.toLowerCase();
       const result = lowercaseTitle.replace(' ', '-');
-  
+
       return result;
   }
     return (
@@ -33,18 +33,20 @@ class MeetupTemplate extends Component {
         <div className="meetup-presenters">
           {this.props.meetup.presenters.map(presenter => (
             <div className="meetup-presenter meetupUnit" key={presenter.presentationTitle}>
-              <div className="meetup-presenterImageContainer  meetupUnit-imageContainer">
+              <div className="meetup-presenterTop  meetupUnit-top">
                 <img
                   className="meetup-presenterImage  meetupUnit-image"
                   src={presenter.image ? presenter.image : HeadshotPlaceholder}
                   alt={presenter.image ? presenter.name : "Default headshot placeholder"}
                 />
-                <span className="meetup-presenterName  meetupUnit-name">{presenter.name}</span>
+                <div className="meetup-presenterTitleGroup">
+                  {presenter.presentationTitle && (
+                    <h4 className="meetup-presenterTitle">{presenter.presentationTitle}</h4>
+                  )}
+                  <span className="meetup-presenterName  meetupUnit-name">by {presenter.name}</span>
+                </div>
               </div>
               <div className="meetup-presenterInfo  meetupUnit-info">
-                {presenter.presentationTitle && (
-                  <h4 className="meetup-presenterTitle">{presenter.presentationTitle}</h4>
-                )}
                 <p className="meetup-presenterText  meetupUnit-text">{presenter.text}</p>
                 <ul className="meetup-presenterLinks  meetupUnit-links">
                   {presenter.links &&
@@ -57,6 +59,7 @@ class MeetupTemplate extends Component {
                     ))}
                 </ul>
               </div>
+              <a className="meetup-presenterVideo">View the video recording</a>
             </div>
           ))}
         </div>
@@ -64,9 +67,8 @@ class MeetupTemplate extends Component {
         <div className="meetup-sponsors">
           {this.props.meetup.sponsors && this.props.meetup.sponsors.map(sponsor => (
             <div className="meetup-sponsor  meetupUnit" key={sponsor.name}>
-              <div className="meetupUnit-imageContainer">
+              <div className="meetupUnit-imageContainer meetupUnit-top">
                 <img className="meetupUnit-image" src={sponsor.logo} alt={sponsor.name} />
-                <h4 className="meetupUnit-name">{sponsor.name}</h4>
               </div>
               <div className="meetupUnit-info">
                 <p className="meetupUnit-text">{sponsor.text}</p>

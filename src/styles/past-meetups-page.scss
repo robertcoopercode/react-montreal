@@ -31,6 +31,14 @@
     width: 900px;
     max-width: 100%;
     margin: 0 auto 20px;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    a {
+      @include link-border();
+    }
   }
 
   &-meetup {

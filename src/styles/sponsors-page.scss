@@ -50,7 +50,7 @@
   }
 
   &-ctaLink {
-    @include large-button($background-dark);
+    @include large-button();
   }
 
   &-sponsors {

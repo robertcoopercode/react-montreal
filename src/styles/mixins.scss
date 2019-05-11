@@ -88,18 +88,64 @@ $breakpoints: (
   }
 }
 
-@mixin large-button($color: $highlight-secondary) {
-  height: 45px;
-  color: $body-light;
-  line-height: 45px;
+%button {
   display: inline-block;
-  padding: 0 20px;
-  font-size: 20px;
-  border-radius: 2px;
-  background-color: $color;
-  transition: all $short-transition-duration ease-in-out;
+  border-radius: 0;
+  background-color: $background-header;
+  transition: all $medium-transition-duration ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: $highlight;
+    transform-origin: center;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform $medium-transition-duration ease-in-out;
+  }
+
+  &:hover::before {
+    transform: translate(-50%, -50%) scale(15);
+  }
 
   &:hover {
-    background-color: lighten($color, 5%)
+    color: $body-dark;
+    cursor: pointer;
+  }
+}
+
+@mixin small-button() {
+  @extend %button;
+
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+  font-size: 16px;
+  color: $body-light;
+
+  &::before {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@mixin large-button() {
+  @extend %button;
+
+  height: 45px;
+  line-height: 45px;
+  padding: 0 20px;
+  font-size: 20px;
+  color: $body-light;
+
+  &::before {
+    width: 45px;
+    height: 45px;
   }
 }

@@ -3,6 +3,7 @@
 
 .meetupUnit {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   padding-bottom: 30px;
   flex-basis: 700px;
@@ -12,29 +13,21 @@
     padding: 0 20px;
   }
 
-  &-imageContainer {
+  &-top {
     display: flex;
-    flex-direction: column;
     align-items: center;
     flex-shrink: 0;
-    margin-right: 20px;
-    flex-basis: 120px;
-
-    @include respond-to("medium") {
-      margin-right: 20px;
-    }
+    margin-bottom: 20px;
   }
 
   &-image {
     height: 100px;
     width: 100px;
     border-radius: calc(100px / 2);
-    margin-bottom: 10px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     object-fit: contain;
 
     @include respond-to("medium") {
-      margin-bottom: 20px;
       border-radius: calc(100px / 2);
     }
   }
@@ -73,12 +66,22 @@
 
 .meetup {
   border: 3px solid rgba($highlight, 0.2);
-  padding: 10px;
+  padding: 20px;
   @include medium-font();
 
   @include respond-to("medium") {
     padding: 40px;
     flex-direction: row;
+  }
+
+  &-presenterImage {
+    margin-right: 20px;
+  }
+
+  &-presenterTitleGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   &-title {
@@ -124,15 +127,26 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
-    
+
     @include respond-to("medium") {
       margin: 0 -20px;
     }
   }
 
   &-presenterTitle {
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 10px;
+  }
+
+  &-presenterVideo {
+    @include small-button();
+    margin-top: 30px;
+    align-self: center;
+  }
+
+  &-sponsor {
+    flex-basis: 400px;
+    align-items: center;
   }
 
   &-sponsorsTitle {

@@ -1,6 +1,7 @@
 ---
 templateKey: past-meetups-page
 title: Past Meetups
+path: /meetups
 seo:
   browserTitle: Past Meetups | React Montreal
   description: View the topics that were presented at past React Montreal meetups.
