@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/94b3a6ae-e903-41f2-b3bd-5b2f01ae9504/deploy-status)](https://app.netlify.com/sites/react-montreal/deploys)
+
 # Montreal React & React Native JavaScript
 
 The website for the Montreal React & React Native meetup. The site lists information related to upcoming and past meetups including the presenters, topics discussed, and sponsors.
