@@ -2,6 +2,8 @@
 templateKey: meetup
 title: November 2018
 date: 2018-11-28T23:00:00.000Z
+meetupURL: 'https://www.meetup.com/React-MTL/events/256541841/'
+isUpcomingMeetup: false
 presenters:
   - links: []
     name: ' Daniel Lanthier and Dan Forstinger'
@@ -12,6 +14,7 @@ presenters:
       Dan & Daniel are developers at You.i TV, an Ottawa-based company that
       harnessed React Native to create an engine to build apps for 10 different
       platform. including Xbox, Roku, PlayStation etc.
+    videoURL: 'https://youtu.be/C9jbnoQK5QA'
 sponsors:
   - links:
       - linkText: Breather is hiring developers!
