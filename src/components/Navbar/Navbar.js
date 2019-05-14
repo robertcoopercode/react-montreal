@@ -7,10 +7,6 @@ const Hamburger = ({onClick, isOpen}) => (
   <div className={`navbar-hamburger${isOpen ? ' navbar-hamburger--open' : ''}`} onClick={onClick}>
     <span></span>
     <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
   </div>
 )
 

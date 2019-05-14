@@ -11,7 +11,7 @@
 
   &-container {
     width: 0;
-    
+
     &--open {
       background-color: $background-header;
       position: absolute;
@@ -76,7 +76,7 @@
     margin: 0.5rem;
     text-align: right;
     white-space: nowrap;
-    
+
     @include respond-to('small') {
       padding: 0 0.5rem;
       margin: 0 0.5rem;
@@ -93,8 +93,8 @@
   &-hamburger {
     position: relative;
     right: 10px;
-    width: 40px;
-    height: 30px;
+    width: 30px;
+    height: 14px;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
@@ -106,73 +106,33 @@
     span {
       display: block;
       position: absolute;
-      height: 4px;
-      width: 50%;
+      height: 2px;
+      width: 100%;
       background: #fff;
       opacity: 1;
       transform: rotate(0deg);
       transition: .25s ease-in-out;
-    }
-    
-      span:nth-child(even) {
-      left: 50%;
-      border-radius: 0 4px 4px 0;
-    }
-    
-      span:nth-child(odd) {
-      left:0px;
-      border-radius: 4px 0 0 4px;
-    }
-    
-      span:nth-child(1),   span:nth-child(2) {
-      top: 0px;
-    }
-    
-      span:nth-child(3),   span:nth-child(4) {
-      top: 12px;
-    }
-    
-      span:nth-child(5),   span:nth-child(6) {
-      top: 24px;
+      border-radius: 4px;
     }
 
-    &--open {
-      span:nth-child(1),span:nth-child(6) {
-        transform: rotate(45deg);
-      }
-      
-      span:nth-child(2),span:nth-child(5) {
-        transform: rotate(-45deg);
-      }
-      
       span:nth-child(1) {
-        left: 5px;
-        top: 6px;
+        top: 0px;
       }
-      
+
       span:nth-child(2) {
-        left: calc(50% - 5px);
+        top: 12px;
+      }
+
+    &--open {
+      span:nth-child(1) {
+        transform: rotate(45deg);
         top: 6px;
+        top: calc();
       }
-      
-      span:nth-child(3) {
-        left: -50%;
-        opacity: 0;
-      }
-      
-      span:nth-child(4) {
-        left: 100%;
-        opacity: 0;
-      }
-      
-      span:nth-child(5) {
-        left: 5px;
-        top: 16px;
-      }
-      
-      span:nth-child(6) {
-        left: calc(50% - 5px);
-        top: 16px;
+
+      span:nth-child(2) {
+        transform: rotate(-45deg);
+        top: 6px;
       }
     }
   }
