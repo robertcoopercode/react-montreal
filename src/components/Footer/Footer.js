@@ -15,7 +15,7 @@ export const FooterTemplate = ({ data }) => {
                   className="footer-socialLink"
                   href={socialLink.linkURL}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                 >
                   <img
                     className="footer-socialLinkIcon"

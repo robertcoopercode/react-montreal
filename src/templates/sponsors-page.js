@@ -29,7 +29,7 @@ export const SponsorsPageTemplate = ({
         {data.sponsorsList && (
           <div className="sponsorsPage-sponsors">
             {data.sponsorsList.map((sponsor) => (
-              <a key={sponsor.name} className="sponsorsPage-sponsor" href={sponsor.link} target="_blank" rel="noopener noreferrer">
+              <a key={sponsor.name} className="sponsorsPage-sponsor" href={sponsor.link} target="_blank" rel="noopener">
                 <img className="sponsorsPage-sponsorImage" src={sponsor.logo} alt={sponsor.name} />
                 <span className="sponsorsPage-sponsorName">{sponsor.name}</span>
               </a>

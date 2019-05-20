@@ -27,7 +27,7 @@ class MeetupTemplate extends Component {
           </p>
           <p className="meetup-metaField  meetup-metaField--location">
             <span className="meetup-label">Location:</span>&nbsp;
-            <a className="meetup-metaFieldLink" href={this.props.meetup.location.mapsLink} target="_blank" rel="noopener noreferrer">{this.props.meetup.location.name}</a>
+            <a className="meetup-metaFieldLink" href={this.props.meetup.location.mapsLink} target="_blank" rel="noopener">{this.props.meetup.location.name}</a>
           </p>
         </div>
         <div className="meetup-presenters">
@@ -59,7 +59,7 @@ class MeetupTemplate extends Component {
                     ))}
                 </ul>
               </div>
-              {presenter.videoURL && <a href={presenter.videoURL} target="_blank" className="meetup-presenterVideo">View the video recording</a>}
+              {presenter.videoURL && <a href={presenter.videoURL} target="_blank" rel="noopener" className="meetup-presenterVideo">View the video recording</a>}
             </div>
           ))}
         </div>
