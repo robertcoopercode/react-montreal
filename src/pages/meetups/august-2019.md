@@ -15,11 +15,9 @@ presenters:
       ReasonML is not a new language; it’s a new syntax powered by OCaml, and
       that is Javascript developer’s friendly.
 
-
       Going from JavaScript to ReasonML does not seem like an easy way to go;
       but building a React application with ReasonML becomes more and more
       accessible.
-
 
       I will explain the basic principles of ReasonML, demystify it through a
       live coding and present the benefits as well as the difficulties we
