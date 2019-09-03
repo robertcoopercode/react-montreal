@@ -3,7 +3,7 @@ templateKey: meetup
 title: August 2019
 date: 2019-08-29T22:00:07.026Z
 meetupURL: 'https://www.meetup.com/React-MTL/events/263969225/'
-isUpcomingMeetup: true
+isUpcomingMeetup: false
 presenters:
   - image: /img/vvd7a3kp_400x400.jpg
     links:
